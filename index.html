@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 <title>2026 West Virginia Flooding — Heritage Building Exposure</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <style>
@@ -31,17 +32,48 @@
     background: #1a1a1a; color: #fff; border-radius: 3px; border: 1px solid #fff;
     font-size: 12px; font-weight: bold; box-shadow: 0 1px 3px rgba(0,0,0,0.5);
   }
+  #gate {
+    position: fixed; inset: 0; z-index: 5000; background: #1a1a2e;
+    display: flex; align-items: center; justify-content: center;
+  }
+  #gate .box {
+    background: #fff; border-radius: 10px; padding: 28px 32px; max-width: 340px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4); text-align: center;
+  }
+  #gate h2 { font-size: 16px; margin: 0 0 8px 0; }
+  #gate p { font-size: 12px; color: #555; margin: 0 0 16px 0; line-height: 1.4; }
+  #gate input {
+    width: 100%; box-sizing: border-box; padding: 8px 10px; font-size: 14px;
+    border: 1px solid #ccc; border-radius: 6px; margin-bottom: 10px;
+  }
+  #gate button {
+    width: 100%; padding: 9px; font-size: 14px; background: #1a1a2e; color: #fff;
+    border: none; border-radius: 6px; cursor: pointer;
+  }
+  #gate .err { color: #b3261e; font-size: 12px; min-height: 16px; margin-top: 8px; }
 </style>
 </head>
 <body>
+
+<div id="gate">
+  <div class="box">
+    <h2>2026 WV Flooding — Heritage Exposure Map</h2>
+    <p>Shared with the research group only — not indexed or public. Enter the password to continue.</p>
+    <input type="password" id="gate-input" placeholder="Password" autofocus>
+    <button id="gate-submit">Enter</button>
+    <div class="err" id="gate-err"></div>
+  </div>
+</div>
+
 <div id="map"></div>
 
 <div id="title-panel" class="panel">
   <h1>2026 West Virginia Flooding — Heritage Building Exposure</h1>
-  <p>15 NRHP-listed historic properties/districts, 3 river gauges, and 12 media-reported damage points in
-  the north-central WV counties hit hardest by the 7/21–22/2026 flash flooding (Upshur, Lewis, Harrison,
-  Pleasants). Heritage color = current flood category at the nearest river gauge — a proximity/exposure
-  indicator, <b>not</b> a confirmed damage assessment.</p>
+  <p>15 NRHP-listed historic properties/districts, 3 river gauges, 12 media-reported damage points, and a
+  preliminary Nearmap imagery-awareness layer, in the north-central WV counties hit hardest by the
+  7/21–22/2026 flash flooding (Upshur, Lewis, Harrison, Pleasants). Heritage color = current flood
+  category at the nearest river gauge — a proximity/exposure indicator, <b>not</b> a confirmed damage
+  assessment.</p>
   <p>Gauge readings update live from NOAA NWPS. Black markers are damage points pulled from local news
   coverage — <b>media-reported, not field-verified.</b> Heritage building damage has not yet been
   field-verified — see README for data sources and current limitations.</p>
@@ -59,6 +91,7 @@
   <div class="row"><span class="swatch sq" style="background:#555; opacity:0.55"></span>Heritage building / district</div>
   <div class="row"><span class="swatch" style="background:#555; border-width:2px"></span>River gauge station</div>
   <div class="row"><span class="swatch sq" style="background:#1a1a1a"></span>Media-reported damage (unverified)</div>
+  <div class="row"><span class="swatch sq" style="background:#2a6fdb; opacity:0.35"></span>Nearmap imagery available (preliminary)</div>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -85,13 +118,7 @@ function fmtTime(iso) {
   return new Date(iso).toLocaleString('en-US', { timeZone: 'America/New_York', dateStyle: 'medium', timeStyle: 'short' }) + ' ET';
 }
 
-const map = L.map('map', { zoomControl: true });
-
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
-
+let map;
 let gaugesById = {};
 let gaugeLayerRef = null;
 let heritageLayerRef = null;
@@ -129,6 +156,22 @@ function gaugePopup(p) {
   html += `<div class="field"><div class="field-label">Source</div>${escapeHtml(p.source)} (retrieved ${escapeHtml(p.retrieved)})</div>`;
   return html;
 }
+
+function nearmapPopup(p) {
+  let html = `<b>Nearmap imagery available — ${escapeHtml(p.town)}</b>`;
+  html += `<div class="field"><div class="field-label">Event</div>${escapeHtml(p.event_name)} (${escapeHtml(p.event_date)})</div>`;
+  html += `<div class="field"><div class="field-label">Note</div>${escapeHtml(p.note)}</div>`;
+  html += `<div class="field"><div class="field-label">Source</div>${escapeHtml(p.source)} (retrieved ${escapeHtml(p.retrieved)})</div>`;
+  return html;
+}
+
+function initApp() {
+  map = L.map('map', { zoomControl: true });
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
 
 fetch('gauges.geojson')
   .then(r => r.json())
@@ -207,16 +250,59 @@ fetch('gauges.geojson')
     });
     damageLayer.addTo(map);
 
+    return fetch('nearmap_coverage.geojson').then(r => r.json());
+  })
+  .then(geojson => {
+    const nearmapLayer = L.geoJSON(geojson, {
+      style: { color: '#2a6fdb', weight: 1, fillColor: '#2a6fdb', fillOpacity: 0.25, dashArray: '3,3' },
+      onEachFeature: (feature, layer) => {
+        layer.bindPopup(nearmapPopup(feature.properties));
+      }
+    });
+    nearmapLayer.addTo(map);
+
     const b = L.latLngBounds([]);
     if (gaugeLayerRef) b.extend(gaugeLayerRef.getBounds());
     if (heritageLayerRef) b.extend(heritageLayerRef.getBounds());
-    b.extend(damageLayer.getBounds());
+    b.extend(nearmapLayer.getBounds());
     if (b.isValid()) {
       map.fitBounds(b, { padding: [30, 30] });
     } else {
       map.setView([39.1, -80.5], 9);
     }
   });
+}
+
+// --- Password gate ---
+// NOTE: this is a client-side speedbump, not real security. The page source (including this
+// password) is fully visible to anyone who views it -- this only keeps the map out of search
+// engines and casual stumbling. Do not rely on this to protect anything sensitive.
+const GATE_PASSWORD = 'h3d';
+const GATE_STORAGE_KEY = 'wvflood_map_unlocked';
+
+function unlockAndInit() {
+  document.getElementById('gate').style.display = 'none';
+  initApp();
+}
+
+if (localStorage.getItem(GATE_STORAGE_KEY) === 'yes') {
+  unlockAndInit();
+} else {
+  const input = document.getElementById('gate-input');
+  const err = document.getElementById('gate-err');
+  function tryUnlock() {
+    if (input.value === GATE_PASSWORD) {
+      localStorage.setItem(GATE_STORAGE_KEY, 'yes');
+      unlockAndInit();
+    } else {
+      err.textContent = 'Incorrect password.';
+      input.value = '';
+      input.focus();
+    }
+  }
+  document.getElementById('gate-submit').addEventListener('click', tryUnlock);
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') tryUnlock(); });
+}
 </script>
 </body>
 </html>

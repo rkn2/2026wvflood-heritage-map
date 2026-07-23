@@ -1,0 +1,3515 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.392,
+       38.986
+      ],
+      [
+       -80.38,
+       38.986
+      ],
+      [
+       -80.38,
+       38.998
+      ],
+      [
+       -80.392,
+       38.998
+      ],
+      [
+       -80.392,
+       38.986
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.404,
+       38.986
+      ],
+      [
+       -80.392,
+       38.986
+      ],
+      [
+       -80.392,
+       38.998
+      ],
+      [
+       -80.404,
+       38.998
+      ],
+      [
+       -80.404,
+       38.986
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.44,
+       38.998
+      ],
+      [
+       -80.428,
+       38.998
+      ],
+      [
+       -80.428,
+       39.01
+      ],
+      [
+       -80.44,
+       39.01
+      ],
+      [
+       -80.44,
+       38.998
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.428,
+       38.998
+      ],
+      [
+       -80.416,
+       38.998
+      ],
+      [
+       -80.416,
+       39.01
+      ],
+      [
+       -80.428,
+       39.01
+      ],
+      [
+       -80.428,
+       38.998
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.416,
+       38.998
+      ],
+      [
+       -80.404,
+       38.998
+      ],
+      [
+       -80.404,
+       39.01
+      ],
+      [
+       -80.416,
+       39.01
+      ],
+      [
+       -80.416,
+       38.998
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.404,
+       38.998
+      ],
+      [
+       -80.392,
+       38.998
+      ],
+      [
+       -80.392,
+       39.01
+      ],
+      [
+       -80.404,
+       39.01
+      ],
+      [
+       -80.404,
+       38.998
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.452,
+       38.998
+      ],
+      [
+       -80.44,
+       38.998
+      ],
+      [
+       -80.44,
+       39.01
+      ],
+      [
+       -80.452,
+       39.01
+      ],
+      [
+       -80.452,
+       38.998
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.392,
+       38.998
+      ],
+      [
+       -80.38,
+       38.998
+      ],
+      [
+       -80.38,
+       39.01
+      ],
+      [
+       -80.392,
+       39.01
+      ],
+      [
+       -80.392,
+       38.998
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.38,
+       38.998
+      ],
+      [
+       -80.368,
+       38.998
+      ],
+      [
+       -80.368,
+       39.01
+      ],
+      [
+       -80.38,
+       39.01
+      ],
+      [
+       -80.38,
+       38.998
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.488,
+       39.01
+      ],
+      [
+       -80.476,
+       39.01
+      ],
+      [
+       -80.476,
+       39.022
+      ],
+      [
+       -80.488,
+       39.022
+      ],
+      [
+       -80.488,
+       39.01
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.464,
+       39.01
+      ],
+      [
+       -80.452,
+       39.01
+      ],
+      [
+       -80.452,
+       39.022
+      ],
+      [
+       -80.464,
+       39.022
+      ],
+      [
+       -80.464,
+       39.01
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.452,
+       39.01
+      ],
+      [
+       -80.44,
+       39.01
+      ],
+      [
+       -80.44,
+       39.022
+      ],
+      [
+       -80.452,
+       39.022
+      ],
+      [
+       -80.452,
+       39.01
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.44,
+       39.01
+      ],
+      [
+       -80.428,
+       39.01
+      ],
+      [
+       -80.428,
+       39.022
+      ],
+      [
+       -80.44,
+       39.022
+      ],
+      [
+       -80.44,
+       39.01
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.404,
+       39.01
+      ],
+      [
+       -80.392,
+       39.01
+      ],
+      [
+       -80.392,
+       39.022
+      ],
+      [
+       -80.404,
+       39.022
+      ],
+      [
+       -80.404,
+       39.01
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.428,
+       39.01
+      ],
+      [
+       -80.416,
+       39.01
+      ],
+      [
+       -80.416,
+       39.022
+      ],
+      [
+       -80.428,
+       39.022
+      ],
+      [
+       -80.428,
+       39.01
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.476,
+       39.01
+      ],
+      [
+       -80.464,
+       39.01
+      ],
+      [
+       -80.464,
+       39.022
+      ],
+      [
+       -80.476,
+       39.022
+      ],
+      [
+       -80.476,
+       39.01
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.38,
+       39.01
+      ],
+      [
+       -80.368,
+       39.01
+      ],
+      [
+       -80.368,
+       39.022
+      ],
+      [
+       -80.38,
+       39.022
+      ],
+      [
+       -80.38,
+       39.01
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.392,
+       39.01
+      ],
+      [
+       -80.38,
+       39.01
+      ],
+      [
+       -80.38,
+       39.022
+      ],
+      [
+       -80.392,
+       39.022
+      ],
+      [
+       -80.392,
+       39.01
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.536,
+       39.022
+      ],
+      [
+       -80.524,
+       39.022
+      ],
+      [
+       -80.524,
+       39.034
+      ],
+      [
+       -80.536,
+       39.034
+      ],
+      [
+       -80.536,
+       39.022
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.416,
+       39.01
+      ],
+      [
+       -80.404,
+       39.01
+      ],
+      [
+       -80.404,
+       39.022
+      ],
+      [
+       -80.416,
+       39.022
+      ],
+      [
+       -80.416,
+       39.01
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.524,
+       39.022
+      ],
+      [
+       -80.512,
+       39.022
+      ],
+      [
+       -80.512,
+       39.034
+      ],
+      [
+       -80.524,
+       39.034
+      ],
+      [
+       -80.524,
+       39.022
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.512,
+       39.022
+      ],
+      [
+       -80.5,
+       39.022
+      ],
+      [
+       -80.5,
+       39.034
+      ],
+      [
+       -80.512,
+       39.034
+      ],
+      [
+       -80.512,
+       39.022
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.488,
+       39.022
+      ],
+      [
+       -80.476,
+       39.022
+      ],
+      [
+       -80.476,
+       39.034
+      ],
+      [
+       -80.488,
+       39.034
+      ],
+      [
+       -80.488,
+       39.022
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.5,
+       39.022
+      ],
+      [
+       -80.488,
+       39.022
+      ],
+      [
+       -80.488,
+       39.034
+      ],
+      [
+       -80.5,
+       39.034
+      ],
+      [
+       -80.5,
+       39.022
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.476,
+       39.022
+      ],
+      [
+       -80.464,
+       39.022
+      ],
+      [
+       -80.464,
+       39.034
+      ],
+      [
+       -80.476,
+       39.034
+      ],
+      [
+       -80.476,
+       39.022
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.464,
+       39.022
+      ],
+      [
+       -80.452,
+       39.022
+      ],
+      [
+       -80.452,
+       39.034
+      ],
+      [
+       -80.464,
+       39.034
+      ],
+      [
+       -80.464,
+       39.022
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.452,
+       39.022
+      ],
+      [
+       -80.44,
+       39.022
+      ],
+      [
+       -80.44,
+       39.034
+      ],
+      [
+       -80.452,
+       39.034
+      ],
+      [
+       -80.452,
+       39.022
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.428,
+       39.022
+      ],
+      [
+       -80.416,
+       39.022
+      ],
+      [
+       -80.416,
+       39.034
+      ],
+      [
+       -80.428,
+       39.034
+      ],
+      [
+       -80.428,
+       39.022
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.404,
+       39.022
+      ],
+      [
+       -80.392,
+       39.022
+      ],
+      [
+       -80.392,
+       39.034
+      ],
+      [
+       -80.404,
+       39.034
+      ],
+      [
+       -80.404,
+       39.022
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.44,
+       39.022
+      ],
+      [
+       -80.428,
+       39.022
+      ],
+      [
+       -80.428,
+       39.034
+      ],
+      [
+       -80.44,
+       39.034
+      ],
+      [
+       -80.44,
+       39.022
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.392,
+       39.022
+      ],
+      [
+       -80.38,
+       39.022
+      ],
+      [
+       -80.38,
+       39.034
+      ],
+      [
+       -80.392,
+       39.034
+      ],
+      [
+       -80.392,
+       39.022
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.512,
+       39.034
+      ],
+      [
+       -80.5,
+       39.034
+      ],
+      [
+       -80.5,
+       39.046
+      ],
+      [
+       -80.512,
+       39.046
+      ],
+      [
+       -80.512,
+       39.034
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.5,
+       39.034
+      ],
+      [
+       -80.488,
+       39.034
+      ],
+      [
+       -80.488,
+       39.046
+      ],
+      [
+       -80.5,
+       39.046
+      ],
+      [
+       -80.5,
+       39.034
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.488,
+       39.034
+      ],
+      [
+       -80.476,
+       39.034
+      ],
+      [
+       -80.476,
+       39.046
+      ],
+      [
+       -80.488,
+       39.046
+      ],
+      [
+       -80.488,
+       39.034
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.476,
+       39.034
+      ],
+      [
+       -80.464,
+       39.034
+      ],
+      [
+       -80.464,
+       39.046
+      ],
+      [
+       -80.476,
+       39.046
+      ],
+      [
+       -80.476,
+       39.034
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.536,
+       39.034
+      ],
+      [
+       -80.524,
+       39.034
+      ],
+      [
+       -80.524,
+       39.046
+      ],
+      [
+       -80.536,
+       39.046
+      ],
+      [
+       -80.536,
+       39.034
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.464,
+       39.034
+      ],
+      [
+       -80.452,
+       39.034
+      ],
+      [
+       -80.452,
+       39.046
+      ],
+      [
+       -80.464,
+       39.046
+      ],
+      [
+       -80.464,
+       39.034
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.452,
+       39.034
+      ],
+      [
+       -80.44,
+       39.034
+      ],
+      [
+       -80.44,
+       39.046
+      ],
+      [
+       -80.452,
+       39.046
+      ],
+      [
+       -80.452,
+       39.034
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.416,
+       39.022
+      ],
+      [
+       -80.404,
+       39.022
+      ],
+      [
+       -80.404,
+       39.034
+      ],
+      [
+       -80.416,
+       39.034
+      ],
+      [
+       -80.416,
+       39.022
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.44,
+       39.034
+      ],
+      [
+       -80.428,
+       39.034
+      ],
+      [
+       -80.428,
+       39.046
+      ],
+      [
+       -80.44,
+       39.046
+      ],
+      [
+       -80.44,
+       39.034
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.536,
+       39.046
+      ],
+      [
+       -80.524,
+       39.046
+      ],
+      [
+       -80.524,
+       39.058
+      ],
+      [
+       -80.536,
+       39.058
+      ],
+      [
+       -80.536,
+       39.046
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.524,
+       39.034
+      ],
+      [
+       -80.512,
+       39.034
+      ],
+      [
+       -80.512,
+       39.046
+      ],
+      [
+       -80.524,
+       39.046
+      ],
+      [
+       -80.524,
+       39.034
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.512,
+       39.046
+      ],
+      [
+       -80.5,
+       39.046
+      ],
+      [
+       -80.5,
+       39.058
+      ],
+      [
+       -80.512,
+       39.058
+      ],
+      [
+       -80.512,
+       39.046
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.524,
+       39.046
+      ],
+      [
+       -80.512,
+       39.046
+      ],
+      [
+       -80.512,
+       39.058
+      ],
+      [
+       -80.524,
+       39.058
+      ],
+      [
+       -80.524,
+       39.046
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.5,
+       39.046
+      ],
+      [
+       -80.488,
+       39.046
+      ],
+      [
+       -80.488,
+       39.058
+      ],
+      [
+       -80.5,
+       39.058
+      ],
+      [
+       -80.5,
+       39.046
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.488,
+       39.046
+      ],
+      [
+       -80.476,
+       39.046
+      ],
+      [
+       -80.476,
+       39.058
+      ],
+      [
+       -80.488,
+       39.058
+      ],
+      [
+       -80.488,
+       39.046
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.452,
+       39.046
+      ],
+      [
+       -80.44,
+       39.046
+      ],
+      [
+       -80.44,
+       39.058
+      ],
+      [
+       -80.452,
+       39.058
+      ],
+      [
+       -80.452,
+       39.046
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.476,
+       39.046
+      ],
+      [
+       -80.464,
+       39.046
+      ],
+      [
+       -80.464,
+       39.058
+      ],
+      [
+       -80.476,
+       39.058
+      ],
+      [
+       -80.476,
+       39.046
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.524,
+       39.058
+      ],
+      [
+       -80.512,
+       39.058
+      ],
+      [
+       -80.512,
+       39.07
+      ],
+      [
+       -80.524,
+       39.07
+      ],
+      [
+       -80.524,
+       39.058
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.536,
+       39.058
+      ],
+      [
+       -80.524,
+       39.058
+      ],
+      [
+       -80.524,
+       39.07
+      ],
+      [
+       -80.536,
+       39.07
+      ],
+      [
+       -80.536,
+       39.058
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.464,
+       39.046
+      ],
+      [
+       -80.452,
+       39.046
+      ],
+      [
+       -80.452,
+       39.058
+      ],
+      [
+       -80.464,
+       39.058
+      ],
+      [
+       -80.464,
+       39.046
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.464,
+       39.058
+      ],
+      [
+       -80.452,
+       39.058
+      ],
+      [
+       -80.452,
+       39.07
+      ],
+      [
+       -80.464,
+       39.07
+      ],
+      [
+       -80.464,
+       39.058
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.452,
+       39.058
+      ],
+      [
+       -80.44,
+       39.058
+      ],
+      [
+       -80.44,
+       39.07
+      ],
+      [
+       -80.452,
+       39.07
+      ],
+      [
+       -80.452,
+       39.058
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.488,
+       39.058
+      ],
+      [
+       -80.476,
+       39.058
+      ],
+      [
+       -80.476,
+       39.07
+      ],
+      [
+       -80.488,
+       39.07
+      ],
+      [
+       -80.488,
+       39.058
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.464,
+       39.07
+      ],
+      [
+       -80.452,
+       39.07
+      ],
+      [
+       -80.452,
+       39.082
+      ],
+      [
+       -80.464,
+       39.082
+      ],
+      [
+       -80.464,
+       39.07
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.488,
+       39.07
+      ],
+      [
+       -80.476,
+       39.07
+      ],
+      [
+       -80.476,
+       39.082
+      ],
+      [
+       -80.488,
+       39.082
+      ],
+      [
+       -80.488,
+       39.07
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.476,
+       39.07
+      ],
+      [
+       -80.464,
+       39.07
+      ],
+      [
+       -80.464,
+       39.082
+      ],
+      [
+       -80.476,
+       39.082
+      ],
+      [
+       -80.476,
+       39.07
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.476,
+       39.058
+      ],
+      [
+       -80.464,
+       39.058
+      ],
+      [
+       -80.464,
+       39.07
+      ],
+      [
+       -80.476,
+       39.07
+      ],
+      [
+       -80.476,
+       39.058
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.452,
+       39.07
+      ],
+      [
+       -80.44,
+       39.07
+      ],
+      [
+       -80.44,
+       39.082
+      ],
+      [
+       -80.452,
+       39.082
+      ],
+      [
+       -80.452,
+       39.07
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.488,
+       39.082
+      ],
+      [
+       -80.476,
+       39.082
+      ],
+      [
+       -80.476,
+       39.094
+      ],
+      [
+       -80.488,
+       39.094
+      ],
+      [
+       -80.488,
+       39.082
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.464,
+       39.082
+      ],
+      [
+       -80.452,
+       39.082
+      ],
+      [
+       -80.452,
+       39.094
+      ],
+      [
+       -80.464,
+       39.094
+      ],
+      [
+       -80.464,
+       39.082
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.476,
+       39.082
+      ],
+      [
+       -80.464,
+       39.082
+      ],
+      [
+       -80.464,
+       39.094
+      ],
+      [
+       -80.476,
+       39.094
+      ],
+      [
+       -80.476,
+       39.082
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.452,
+       39.082
+      ],
+      [
+       -80.44,
+       39.082
+      ],
+      [
+       -80.44,
+       39.094
+      ],
+      [
+       -80.452,
+       39.094
+      ],
+      [
+       -80.452,
+       39.082
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Weston",
+    "county": "Lewis",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.33,
+       39.238
+      ],
+      [
+       -80.318,
+       39.238
+      ],
+      [
+       -80.318,
+       39.25
+      ],
+      [
+       -80.33,
+       39.25
+      ],
+      [
+       -80.33,
+       39.238
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.306,
+       39.238
+      ],
+      [
+       -80.294,
+       39.238
+      ],
+      [
+       -80.294,
+       39.25
+      ],
+      [
+       -80.306,
+       39.25
+      ],
+      [
+       -80.306,
+       39.238
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.318,
+       39.238
+      ],
+      [
+       -80.306,
+       39.238
+      ],
+      [
+       -80.306,
+       39.25
+      ],
+      [
+       -80.318,
+       39.25
+      ],
+      [
+       -80.318,
+       39.238
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.342,
+       39.25
+      ],
+      [
+       -80.33,
+       39.25
+      ],
+      [
+       -80.33,
+       39.262
+      ],
+      [
+       -80.342,
+       39.262
+      ],
+      [
+       -80.342,
+       39.25
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.33,
+       39.25
+      ],
+      [
+       -80.318,
+       39.25
+      ],
+      [
+       -80.318,
+       39.262
+      ],
+      [
+       -80.33,
+       39.262
+      ],
+      [
+       -80.33,
+       39.25
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.318,
+       39.25
+      ],
+      [
+       -80.306,
+       39.25
+      ],
+      [
+       -80.306,
+       39.262
+      ],
+      [
+       -80.318,
+       39.262
+      ],
+      [
+       -80.318,
+       39.25
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.306,
+       39.25
+      ],
+      [
+       -80.294,
+       39.25
+      ],
+      [
+       -80.294,
+       39.262
+      ],
+      [
+       -80.306,
+       39.262
+      ],
+      [
+       -80.306,
+       39.25
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.354,
+       39.262
+      ],
+      [
+       -80.342,
+       39.262
+      ],
+      [
+       -80.342,
+       39.274
+      ],
+      [
+       -80.354,
+       39.274
+      ],
+      [
+       -80.354,
+       39.262
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.342,
+       39.262
+      ],
+      [
+       -80.33,
+       39.262
+      ],
+      [
+       -80.33,
+       39.274
+      ],
+      [
+       -80.342,
+       39.274
+      ],
+      [
+       -80.342,
+       39.262
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.33,
+       39.262
+      ],
+      [
+       -80.318,
+       39.262
+      ],
+      [
+       -80.318,
+       39.274
+      ],
+      [
+       -80.33,
+       39.274
+      ],
+      [
+       -80.33,
+       39.262
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.306,
+       39.262
+      ],
+      [
+       -80.294,
+       39.262
+      ],
+      [
+       -80.294,
+       39.274
+      ],
+      [
+       -80.306,
+       39.274
+      ],
+      [
+       -80.306,
+       39.262
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.318,
+       39.262
+      ],
+      [
+       -80.306,
+       39.262
+      ],
+      [
+       -80.306,
+       39.274
+      ],
+      [
+       -80.318,
+       39.274
+      ],
+      [
+       -80.318,
+       39.262
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.354,
+       39.274
+      ],
+      [
+       -80.342,
+       39.274
+      ],
+      [
+       -80.342,
+       39.286
+      ],
+      [
+       -80.354,
+       39.286
+      ],
+      [
+       -80.354,
+       39.274
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.342,
+       39.274
+      ],
+      [
+       -80.33,
+       39.274
+      ],
+      [
+       -80.33,
+       39.286
+      ],
+      [
+       -80.342,
+       39.286
+      ],
+      [
+       -80.342,
+       39.274
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.33,
+       39.274
+      ],
+      [
+       -80.318,
+       39.274
+      ],
+      [
+       -80.318,
+       39.286
+      ],
+      [
+       -80.33,
+       39.286
+      ],
+      [
+       -80.33,
+       39.274
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.318,
+       39.274
+      ],
+      [
+       -80.306,
+       39.274
+      ],
+      [
+       -80.306,
+       39.286
+      ],
+      [
+       -80.318,
+       39.286
+      ],
+      [
+       -80.318,
+       39.274
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.306,
+       39.274
+      ],
+      [
+       -80.294,
+       39.274
+      ],
+      [
+       -80.294,
+       39.286
+      ],
+      [
+       -80.306,
+       39.286
+      ],
+      [
+       -80.306,
+       39.274
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.366,
+       39.274
+      ],
+      [
+       -80.354,
+       39.274
+      ],
+      [
+       -80.354,
+       39.286
+      ],
+      [
+       -80.366,
+       39.286
+      ],
+      [
+       -80.366,
+       39.274
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.366,
+       39.286
+      ],
+      [
+       -80.354,
+       39.286
+      ],
+      [
+       -80.354,
+       39.298
+      ],
+      [
+       -80.366,
+       39.298
+      ],
+      [
+       -80.366,
+       39.286
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.354,
+       39.286
+      ],
+      [
+       -80.342,
+       39.286
+      ],
+      [
+       -80.342,
+       39.298
+      ],
+      [
+       -80.354,
+       39.298
+      ],
+      [
+       -80.354,
+       39.286
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.33,
+       39.286
+      ],
+      [
+       -80.318,
+       39.286
+      ],
+      [
+       -80.318,
+       39.298
+      ],
+      [
+       -80.33,
+       39.298
+      ],
+      [
+       -80.33,
+       39.286
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.342,
+       39.286
+      ],
+      [
+       -80.33,
+       39.286
+      ],
+      [
+       -80.33,
+       39.298
+      ],
+      [
+       -80.342,
+       39.298
+      ],
+      [
+       -80.342,
+       39.286
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.318,
+       39.286
+      ],
+      [
+       -80.306,
+       39.286
+      ],
+      [
+       -80.306,
+       39.298
+      ],
+      [
+       -80.318,
+       39.298
+      ],
+      [
+       -80.318,
+       39.286
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.294,
+       39.286
+      ],
+      [
+       -80.282,
+       39.286
+      ],
+      [
+       -80.282,
+       39.298
+      ],
+      [
+       -80.294,
+       39.298
+      ],
+      [
+       -80.294,
+       39.286
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.282,
+       39.286
+      ],
+      [
+       -80.27,
+       39.286
+      ],
+      [
+       -80.27,
+       39.298
+      ],
+      [
+       -80.282,
+       39.298
+      ],
+      [
+       -80.282,
+       39.286
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.306,
+       39.286
+      ],
+      [
+       -80.294,
+       39.286
+      ],
+      [
+       -80.294,
+       39.298
+      ],
+      [
+       -80.306,
+       39.298
+      ],
+      [
+       -80.306,
+       39.286
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.27,
+       39.286
+      ],
+      [
+       -80.258,
+       39.286
+      ],
+      [
+       -80.258,
+       39.298
+      ],
+      [
+       -80.27,
+       39.298
+      ],
+      [
+       -80.27,
+       39.286
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "town": "Clarksburg",
+    "county": "Harrison",
+    "event_name": "North-Central West Virginia Flood",
+    "event_date": "2026-07-22",
+    "note": "Preliminary imagery-awareness cell: Nearmap has post-event aerial imagery covering this ~1.3km grid cell, tagged to this flood event. This is a coverage indicator only -- not the imagery itself, and not a damage assessment. Derived from a coarse sampling grid, so treat cell edges as approximate.",
+    "source": "Nearmap Coverage API (metadata only, no imagery redistributed)",
+    "retrieved": "2026-07-23"
+   }
+  }
+ ]
+}

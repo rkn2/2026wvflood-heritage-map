@@ -1,9 +1,17 @@
 # 2026 West Virginia Flooding — Heritage Building Exposure Map
 
-Public map tracking heritage-building exposure to the catastrophic flash flooding that hit north-central
-West Virginia July 21-22, 2026 (Governor Morrisey declared a state of emergency for all 55 counties on 7/21).
+Password-gated map tracking heritage-building exposure to the catastrophic flash flooding that hit
+north-central West Virginia July 21-22, 2026 (Governor Morrisey declared a state of emergency for all 55
+counties on 7/21). Shared within the research group only, not intended as a public map.
 
-Live at: https://rkn2.github.io/2026wvflood-heritage-map/
+Live at: https://rkn2.github.io/2026wvflood-heritage-map/ (password required)
+
+**Access note:** the password gate is a client-side JS check only (see `index.html`) — enough to keep
+this out of search engines and casual link-following, but anyone who views the page source can read the
+password. The GitHub repo itself is private for the same reason (so the source/password aren't
+publicly browsable on GitHub); the Pages URL still works without GitHub login, just with the password.
+This is a "keep it out of casual reach" measure, not real access control — don't rely on it for anything
+that needs to stay confidential against a determined viewer.
 
 ## What this shows
 
@@ -15,6 +23,12 @@ Live at: https://rkn2.github.io/2026wvflood-heritage-map/
 - **12 media-reported damage points** (black `!` markers) — specific locations named in local news
   coverage: flooded stores, impassable roads/highway segments, a hospital that cancelled appointments,
   the Upshur County Courthouse closure.
+- **Preliminary Nearmap imagery-awareness layer** (blue dashed cells) — grid cells where Nearmap has
+  post-event aerial imagery on file for this event ("North-Central West Virginia Flood," captured
+  2026-07-22). This is a coverage indicator only — it tells you where recent aerial imagery *exists*,
+  not what it shows or whether damage occurred. The actual Nearmap imagery is licensed/proprietary and is
+  NOT included here or anywhere in this repo — only the fact of coverage (derived from Nearmap's
+  Coverage API metadata) is shared.
 
 Each heritage building is colored by the **peak flood category recorded so far at its district's nearest
 gauge** — this is a proximity/exposure indicator, not a confirmed damage assessment. No building here
@@ -31,10 +45,26 @@ separate, independent layer — pulled directly from news reporting, not inferre
 | River gauge flood category + stage/time series | NOAA NWPS API (`api.water.noaa.gov/nwps/v1/gauges/{id}`), gauges `bknw2`, `wtnw2`, `clkw2` | 2026-07-23 |
 | Damage report locations | Local news: My Buckhannon, WDTV, AP wire (via CBS News/NBC News), CNN — see each point's popup for its specific article link | 2026-07-23 |
 | Damage report coordinates | OpenStreetMap Nominatim geocoder, from street addresses / named landmarks in the articles | 2026-07-23 |
+| Nearmap imagery-awareness cells | Nearmap Coverage API (`api.nearmap.com/coverage/v2/point/...`), sampled on a ~1.3km grid over Weston/Clarksburg/Buckhannon, filtered to surveys tagged `postCatEventId` for this flood event. Metadata only — no imagery pixels included. | 2026-07-23 |
 
 Full research pipeline and raw data lives in the private `steer` repo at
 `events/2026WVflood/data/{heritage,disaster}/`; this repo holds only the public-safe stripped copies
-(`heritage.geojson`, `gauges.geojson`, `damage_reports.geojson`).
+(`heritage.geojson`, `gauges.geojson`, `damage_reports.geojson`, `nearmap_coverage.geojson`).
+
+### Nearmap coverage caveats
+
+- **Coverage findable ≠ damage confirmed.** A blue cell means Nearmap flew that spot after the flood —
+  nothing more. Always check the actual imagery (private, in the Nearmap portal) before drawing
+  conclusions.
+- **Deployment didn't track flood severity.** Buckhannon had the worst river gauge reading of the whole
+  event (record major flood stage, first time in ~80 years) but got **zero** disaster-response coverage.
+  Weston (only "minor" gauge category) got the largest flown footprint. Whatever triggers Nearmap's
+  disaster-flight deployment, it isn't simply "how bad was the flooding" — treat "was it flown" as
+  independent information, not a severity proxy.
+- **Grid-derived, approximate edges.** These cells come from sampling points ~1.3km apart, not the actual
+  flight-boundary polygon — treat cell edges as approximate, not precise.
+- **Clarksburg's capture is significantly cloud-obscured** in the areas manually checked (Glen Elk,
+  Downtown Clarksburg) — coverage existing doesn't mean the imagery is usable there.
 
 ### Damage report caveats
 
@@ -81,10 +111,11 @@ Quality Hill (15), May-Kraus Farm (5), Weston State Hospital (1 — the asylum b
   FEMA NFHL / `mapwv.gov/flood/` shows the static 100-/500-year floodplain, not this event's actual extent.
 - **No field-verified damage assessment yet** — the 12 damage points are media-reported only (see
   caveats above); no StEER PVRR or official damage assessment exists yet for this 2-day-old event.
-- SAR (Sentinel-1) change detection was considered but deprioritized for this pass — these are flashy
-  small-creek floods that crest and recede in ~24-48 hrs, so unless a Sentinel-1 pass happened to land
-  during peak inundation, SAR would likely only show residual soil saturation, not the crest extent.
-  Worth checking actual scene dates via ASF Vertex before investing in this.
+- **SAR (Sentinel-1) checked and unavailable.** ASF catalog search confirmed no Sentinel-1 acquisition
+  over this AOI between 2026-07-15 and 2026-07-23 — a real coverage gap, not a processing choice. Nearmap
+  turned out to be the usable substitute (see above).
+- Clarksburg's cloud-obscured Nearmap capture means we still don't have clear recent imagery for that
+  town's river corridor specifically.
 
 Built with [Leaflet](https://leafletjs.com/) + OpenStreetMap tiles, no build step — just `index.html`,
-`heritage.geojson`, `gauges.geojson`, and `damage_reports.geojson`.
+`heritage.geojson`, `gauges.geojson`, `damage_reports.geojson`, and `nearmap_coverage.geojson`.
