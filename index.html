@@ -12,17 +12,32 @@
   .panel {
     position: absolute; z-index: 1000; background: rgba(255,255,255,0.95);
     border-radius: 8px; box-shadow: 0 1px 5px rgba(0,0,0,0.4); padding: 10px 14px;
+    max-width: min(340px, calc(100vw - 20px));
+    max-height: calc(100vh - 20px); overflow-y: auto;
+    box-sizing: border-box;
   }
-  #title-panel { top: 10px; left: 10px; max-width: 340px; }
-  #title-panel h1 { font-size: 15px; margin: 0 0 4px 0; }
+  .panel-header { display: flex; align-items: center; justify-content: space-between; cursor: pointer; gap: 8px; }
+  .panel-header .chevron { font-size: 11px; color: #666; flex-shrink: 0; transition: transform 0.15s; }
+  .panel.collapsed .chevron { transform: rotate(-90deg); }
+  .panel.collapsed .panel-body { display: none; }
+  .panel-body { margin-top: 8px; }
+  #title-panel { top: 10px; left: 10px; }
+  #title-panel h1 { font-size: 15px; margin: 0; }
   #title-panel p { font-size: 12px; margin: 0 0 6px 0; color: #333; line-height: 1.4; }
   #title-panel p:last-child { margin-bottom: 0; }
-  #legend { bottom: 20px; left: 10px; font-size: 12px; line-height: 1.5; }
-  #legend h2 { font-size: 12px; margin: 0 0 6px 0; }
+  #legend { bottom: 10px; left: 10px; font-size: 12px; line-height: 1.5; }
+  #legend .panel-header h2 { font-size: 13px; margin: 0; }
+  #legend h2.section { font-size: 12px; margin: 0 0 6px 0; }
   #legend .row { display: flex; align-items: center; margin-bottom: 3px; }
   #legend .swatch { width: 12px; height: 12px; border-radius: 50%; margin-right: 6px; border: 1px solid rgba(0,0,0,0.3); flex-shrink: 0; }
   #legend .swatch.sq { border-radius: 3px; }
   #legend .divider { border-top: 1px solid #ddd; margin: 6px 0; }
+  @media (max-width: 700px) {
+    .panel { padding: 8px 10px; font-size: 11px; }
+    #title-panel h1 { font-size: 13px; }
+    #title-panel p { font-size: 11px; }
+    #legend { bottom: 10px; right: 10px; left: auto; }
+  }
   .leaflet-popup-content { font-size: 13px; max-width: 280px; }
   .leaflet-popup-content b { display: block; margin-bottom: 4px; font-size: 14px; }
   .leaflet-popup-content .field { margin-top: 4px; }
@@ -68,7 +83,11 @@
 <div id="map"></div>
 
 <div id="title-panel" class="panel">
-  <h1>2026 West Virginia Flooding — Heritage Building Exposure</h1>
+  <div class="panel-header" data-toggle>
+    <h1>2026 West Virginia Flooding — Heritage Building Exposure</h1>
+    <span class="chevron">▾</span>
+  </div>
+  <div class="panel-body">
   <p>15 NRHP-listed historic properties/districts, 3 river gauges, 12 media-reported damage points, and a
   preliminary Nearmap imagery-awareness layer, in the north-central WV counties hit hardest by the
   7/21–22/2026 flash flooding (Upshur, Lewis, Harrison, Pleasants). Heritage color = current flood
@@ -77,21 +96,28 @@
   <p>Gauge readings update live from NOAA NWPS. Black markers are damage points pulled from local news
   coverage — <b>media-reported, not field-verified.</b> Heritage building damage has not yet been
   field-verified — see README for data sources and current limitations.</p>
+  </div>
 </div>
 
-<div id="legend" class="panel">
-  <h2>River gauge flood category (peak so far this event)</h2>
+<div id="legend" class="panel collapsed">
+  <div class="panel-header" data-toggle>
+    <h2>Legend</h2>
+    <span class="chevron">▾</span>
+  </div>
+  <div class="panel-body">
+  <h2 class="section">River gauge flood category (peak so far this event)</h2>
   <div class="row"><span class="swatch" style="background:#b3261e"></span>Major flood</div>
   <div class="row"><span class="swatch" style="background:#e8792f"></span>Moderate flood</div>
   <div class="row"><span class="swatch" style="background:#e8c33c"></span>Minor flood</div>
   <div class="row"><span class="swatch" style="background:#4a90d9"></span>Action stage / below</div>
   <div class="row"><span class="swatch" style="background:#9aa0a6"></span>No nearby gauge</div>
   <div class="divider"></div>
-  <h2>Layers</h2>
+  <h2 class="section">Layers</h2>
   <div class="row"><span class="swatch sq" style="background:#555; opacity:0.55"></span>Heritage building / district</div>
   <div class="row"><span class="swatch" style="background:#555; border-width:2px"></span>River gauge station</div>
   <div class="row"><span class="swatch sq" style="background:#1a1a1a"></span>Media-reported damage (unverified)</div>
   <div class="row"><span class="swatch sq" style="background:#2a6fdb; opacity:0.35"></span>Nearmap imagery available (preliminary)</div>
+  </div>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -166,12 +192,22 @@ function nearmapPopup(p) {
 }
 
 function initApp() {
-  map = L.map('map', { zoomControl: true });
+  map = L.map('map', { zoomControl: false });
+  L.control.zoom({ position: 'topright' }).addTo(map);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
+
+  document.querySelectorAll('.panel [data-toggle]').forEach(header => {
+    header.addEventListener('click', () => {
+      header.closest('.panel').classList.toggle('collapsed');
+    });
+  });
+  if (window.innerWidth < 700) {
+    document.getElementById('title-panel').classList.add('collapsed');
+  }
 
 fetch('gauges.geojson')
   .then(r => r.json())
