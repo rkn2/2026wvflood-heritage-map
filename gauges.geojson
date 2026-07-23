@@ -1,0 +1,89 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.20924949,
+     39.0053762
+    ]
+   },
+   "properties": {
+    "gauge_id": "bknw2",
+    "name": "Buckhannon River at Buckhannon",
+    "river": "Buckhannon River",
+    "place": "Buckhannon, WV (Upshur County)",
+    "stage_current_ft": 15.81,
+    "stage_current_time": "2026-07-23T16:45:00Z",
+    "category_current": "below_action",
+    "stage_peak_ft": 27.59,
+    "stage_peak_time": "2026-07-22T14:15:00Z",
+    "category_peak": "major",
+    "flood_stage_action_ft": 21,
+    "flood_stage_minor_ft": 23,
+    "flood_stage_moderate_ft": 25,
+    "flood_stage_major_ft": 26,
+    "source": "NOAA NWPS api.water.noaa.gov",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.473888888889,
+     39.029166666667
+    ]
+   },
+   "properties": {
+    "gauge_id": "wtnw2",
+    "name": "West Fork River at Weston",
+    "river": "West Fork River",
+    "place": "Weston, WV (Lewis County)",
+    "stage_current_ft": 7.1,
+    "stage_current_time": "2026-07-23T16:45:00Z",
+    "category_current": "below_action",
+    "stage_peak_ft": 18.8,
+    "stage_peak_time": "2026-07-22T01:15:00Z",
+    "category_peak": "minor",
+    "flood_stage_action_ft": 15,
+    "flood_stage_minor_ft": 17,
+    "flood_stage_moderate_ft": 23,
+    "flood_stage_major_ft": 25,
+    "source": "NOAA NWPS api.water.noaa.gov",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.3589793,
+     39.23870156
+    ]
+   },
+   "properties": {
+    "gauge_id": "clkw2",
+    "name": "West Fork River near Clarksburg",
+    "river": "West Fork River",
+    "place": "near Clarksburg, WV (Harrison County)",
+    "stage_current_ft": 5.5,
+    "stage_current_time": "2026-07-23T16:15:00Z",
+    "category_current": "below_action",
+    "stage_peak_ft": 17.17,
+    "stage_peak_time": "2026-07-22T20:30:00Z",
+    "category_peak": "moderate",
+    "flood_stage_action_ft": 12,
+    "flood_stage_minor_ft": 14,
+    "flood_stage_moderate_ft": 16,
+    "flood_stage_major_ft": 18,
+    "source": "NOAA NWPS api.water.noaa.gov",
+    "retrieved": "2026-07-23"
+   }
+  }
+ ]
+}

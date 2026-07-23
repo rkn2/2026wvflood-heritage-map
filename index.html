@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026 West Virginia Flooding — Heritage Building Exposure</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+  .panel {
+    position: absolute; z-index: 1000; background: rgba(255,255,255,0.95);
+    border-radius: 8px; box-shadow: 0 1px 5px rgba(0,0,0,0.4); padding: 10px 14px;
+  }
+  #title-panel { top: 10px; left: 10px; max-width: 340px; }
+  #title-panel h1 { font-size: 15px; margin: 0 0 4px 0; }
+  #title-panel p { font-size: 12px; margin: 0 0 6px 0; color: #333; line-height: 1.4; }
+  #title-panel p:last-child { margin-bottom: 0; }
+  #legend { bottom: 20px; left: 10px; font-size: 12px; line-height: 1.5; }
+  #legend h2 { font-size: 12px; margin: 0 0 6px 0; }
+  #legend .row { display: flex; align-items: center; margin-bottom: 3px; }
+  #legend .swatch { width: 12px; height: 12px; border-radius: 50%; margin-right: 6px; border: 1px solid rgba(0,0,0,0.3); flex-shrink: 0; }
+  #legend .swatch.sq { border-radius: 3px; }
+  #legend .divider { border-top: 1px solid #ddd; margin: 6px 0; }
+  .leaflet-popup-content { font-size: 13px; max-width: 280px; }
+  .leaflet-popup-content b { display: block; margin-bottom: 4px; font-size: 14px; }
+  .leaflet-popup-content .field { margin-top: 4px; }
+  .leaflet-popup-content .field-label { color: #666; font-size: 11px; text-transform: uppercase; letter-spacing: 0.03em; }
+</style>
+</head>
+<body>
+<div id="map"></div>
+
+<div id="title-panel" class="panel">
+  <h1>2026 West Virginia Flooding — Heritage Building Exposure</h1>
+  <p>15 NRHP-listed historic properties/districts in the north-central WV counties hit hardest by the
+  7/21–22/2026 flash flooding (Upshur, Lewis, Harrison, Pleasants). Color = current flood category at the
+  nearest river gauge — a proximity/exposure indicator, <b>not</b> a confirmed damage assessment.</p>
+  <p>Gauge readings update live from NOAA NWPS. Heritage building damage has not yet been field-verified —
+  see README for data sources and current limitations.</p>
+</div>
+
+<div id="legend" class="panel">
+  <h2>River gauge flood category (peak so far this event)</h2>
+  <div class="row"><span class="swatch" style="background:#b3261e"></span>Major flood</div>
+  <div class="row"><span class="swatch" style="background:#e8792f"></span>Moderate flood</div>
+  <div class="row"><span class="swatch" style="background:#e8c33c"></span>Minor flood</div>
+  <div class="row"><span class="swatch" style="background:#4a90d9"></span>Action stage / below</div>
+  <div class="row"><span class="swatch" style="background:#9aa0a6"></span>No nearby gauge</div>
+  <div class="divider"></div>
+  <h2>Layers</h2>
+  <div class="row"><span class="swatch sq" style="background:#555; opacity:0.55"></span>Heritage building / district</div>
+  <div class="row"><span class="swatch" style="background:#555; border-width:2px"></span>River gauge station</div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const CATEGORY_COLOR = {
+  major: '#b3261e',
+  moderate: '#e8792f',
+  minor: '#e8c33c',
+  action: '#4a90d9',
+  below_action: '#4a90d9',
+  unknown: '#9aa0a6'
+};
+const NO_GAUGE_COLOR = '#9aa0a6';
+
+function escapeHtml(str) {
+  if (str === null || str === undefined) return '';
+  return String(str).replace(/[&<>"']/g, c => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[c]));
+}
+
+function fmtTime(iso) {
+  if (!iso) return '';
+  return new Date(iso).toLocaleString('en-US', { timeZone: 'America/New_York', dateStyle: 'medium', timeStyle: 'short' }) + ' ET';
+}
+
+const map = L.map('map', { zoomControl: true });
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+let gaugesById = {};
+let gaugeLayerRef = null;
+let heritageLayerRef = null;
+
+function heritagePopup(p) {
+  let html = `<b>${escapeHtml(p.name)}</b>`;
+  html += `<div class="field"><div class="field-label">Location</div>${escapeHtml(p.city)}, ${escapeHtml(p.county)} County, WV</div>`;
+  if (p.is_nhl) html += `<div class="field"><div class="field-label">Designation</div>National Historic Landmark</div>`;
+  if (p.nearest_gauge && gaugesById[p.nearest_gauge]) {
+    const g = gaugesById[p.nearest_gauge];
+    html += `<div class="field"><div class="field-label">Nearest gauge</div>${escapeHtml(g.name)} — peak ${g.category_peak.replace('_',' ')} flood (${g.stage_peak_ft} ft, ${fmtTime(g.stage_peak_time)})</div>`;
+  } else {
+    html += `<div class="field"><div class="field-label">Nearest gauge</div>None in this dataset — flood exposure unknown</div>`;
+  }
+  html += `<div class="field"><div class="field-label">Source</div>${escapeHtml(p.source)} (retrieved ${escapeHtml(p.retrieved)})</div>`;
+  return html;
+}
+
+function gaugePopup(p) {
+  let html = `<b>${escapeHtml(p.name)}</b>`;
+  html += `<div class="field"><div class="field-label">River / place</div>${escapeHtml(p.river)}, ${escapeHtml(p.place)}</div>`;
+  html += `<div class="field"><div class="field-label">Current</div>${p.stage_current_ft} ft (${p.category_current.replace('_',' ')}) — ${fmtTime(p.stage_current_time)}</div>`;
+  html += `<div class="field"><div class="field-label">Peak this event</div>${p.stage_peak_ft} ft (${p.category_peak.replace('_',' ')}) — ${fmtTime(p.stage_peak_time)}</div>`;
+  html += `<div class="field"><div class="field-label">Flood stage thresholds (ft)</div>action ${p.flood_stage_action_ft} · minor ${p.flood_stage_minor_ft} · moderate ${p.flood_stage_moderate_ft} · major ${p.flood_stage_major_ft}</div>`;
+  html += `<div class="field"><div class="field-label">Source</div>${escapeHtml(p.source)} (retrieved ${escapeHtml(p.retrieved)})</div>`;
+  return html;
+}
+
+fetch('gauges.geojson')
+  .then(r => r.json())
+  .then(geojson => {
+    geojson.features.forEach(f => { gaugesById[f.properties.gauge_id] = f.properties; });
+
+    const gaugeLayer = L.geoJSON(geojson, {
+      pointToLayer: (feature, latlng) => {
+        const p = feature.properties;
+        const color = CATEGORY_COLOR[p.category_peak] || CATEGORY_COLOR.unknown;
+        return L.circleMarker(latlng, {
+          radius: 9,
+          fillColor: color,
+          color: '#222',
+          weight: 2,
+          fillOpacity: 0.9
+        });
+      },
+      onEachFeature: (feature, layer) => {
+        layer.bindPopup(gaugePopup(feature.properties));
+      }
+    });
+    gaugeLayerRef = gaugeLayer;
+    gaugeLayer.addTo(map);
+
+    // Heritage layer added after gauges load, so popups can reference gauge data
+    return fetch('heritage.geojson').then(r => r.json());
+  })
+  .then(geojson => {
+    const heritageLayer = L.geoJSON(geojson, {
+      style: (feature) => {
+        const p = feature.properties;
+        const g = p.nearest_gauge && gaugesById[p.nearest_gauge];
+        const color = g ? (CATEGORY_COLOR[g.category_peak] || CATEGORY_COLOR.unknown) : NO_GAUGE_COLOR;
+        return {
+          color: color,
+          weight: g ? 2 : 1,
+          dashArray: g ? null : '4,3',
+          fillColor: color,
+          fillOpacity: 0.35
+        };
+      },
+      pointToLayer: (feature, latlng) => {
+        const p = feature.properties;
+        const g = p.nearest_gauge && gaugesById[p.nearest_gauge];
+        const color = g ? (CATEGORY_COLOR[g.category_peak] || CATEGORY_COLOR.unknown) : NO_GAUGE_COLOR;
+        return L.circleMarker(latlng, {
+          radius: p.is_nhl ? 8 : 6,
+          fillColor: color,
+          color: '#222',
+          weight: p.is_nhl ? 2 : 1,
+          fillOpacity: 0.75
+        });
+      },
+      onEachFeature: (feature, layer) => {
+        layer.bindPopup(heritagePopup(feature.properties));
+      }
+    });
+    heritageLayerRef = heritageLayer;
+    heritageLayer.addTo(map);
+
+    const b = L.latLngBounds([]);
+    if (gaugeLayerRef) b.extend(gaugeLayerRef.getBounds());
+    b.extend(heritageLayer.getBounds());
+    if (b.isValid()) {
+      map.fitBounds(b, { padding: [30, 30] });
+    } else {
+      map.setView([39.1, -80.5], 9);
+    }
+  });
+</script>
+</body>
+</html>
