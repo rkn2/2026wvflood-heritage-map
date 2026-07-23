@@ -113,10 +113,10 @@
   <div class="row"><span class="swatch" style="background:#9aa0a6"></span>No nearby gauge</div>
   <div class="divider"></div>
   <h2 class="section">Layers</h2>
-  <div class="row"><span class="swatch sq" style="background:#555; opacity:0.55"></span>Heritage building / district</div>
+  <label class="row"><input type="checkbox" id="toggle-heritage" style="margin-right:6px;"> <span class="swatch sq" style="background:#555; opacity:0.55"></span>Heritage building / district</label>
   <div class="row"><span class="swatch" style="background:#555; border-width:2px"></span>River gauge station</div>
   <div class="row"><span class="swatch sq" style="background:#1a1a1a"></span>Media-reported damage (unverified)</div>
-  <div class="row"><span class="swatch sq" style="background:#2a6fdb; opacity:0.35"></span>Nearmap imagery available (preliminary)</div>
+  <label class="row"><input type="checkbox" id="toggle-nearmap-coverage" style="margin-right:6px;"> <span class="swatch sq" style="background:#2a6fdb; opacity:0.35"></span>Nearmap imagery available (preliminary)</label>
   <div class="divider"></div>
   <h2 class="section">Nearmap flood-day imagery (2026-07-22)</h2>
   <label class="row"><input type="checkbox" id="toggle-nearmap-weston_core" checked style="margin-right:6px;"> Weston downtown (clear)</label>
@@ -291,7 +291,9 @@ fetch('gauges.geojson')
       }
     });
     heritageLayerRef = heritageLayer;
-    heritageLayer.addTo(map);
+    document.getElementById('toggle-heritage').addEventListener('change', e => {
+      if (e.target.checked) heritageLayer.addTo(map); else map.removeLayer(heritageLayer);
+    });
 
     return fetch('damage_reports.geojson').then(r => r.json());
   })
@@ -319,7 +321,9 @@ fetch('gauges.geojson')
         layer.bindPopup(nearmapPopup(feature.properties));
       }
     });
-    nearmapLayer.addTo(map);
+    document.getElementById('toggle-nearmap-coverage').addEventListener('change', e => {
+      if (e.target.checked) nearmapLayer.addTo(map); else map.removeLayer(nearmapLayer);
+    });
 
     const b = L.latLngBounds([]);
     if (gaugeLayerRef) b.extend(gaugeLayerRef.getBounds());
