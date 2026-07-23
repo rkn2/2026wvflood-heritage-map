@@ -119,8 +119,9 @@
   <div class="row"><span class="swatch sq" style="background:#2a6fdb; opacity:0.35"></span>Nearmap imagery available (preliminary)</div>
   <div class="divider"></div>
   <h2 class="section">Nearmap flood-day imagery (2026-07-22)</h2>
-  <label class="row"><input type="checkbox" id="toggle-nearmap-weston" checked style="margin-right:6px;"> Weston (clear)</label>
-  <label class="row"><input type="checkbox" id="toggle-nearmap-clarksburg" style="margin-right:6px;"> Clarksburg (cloud-obscured)</label>
+  <label class="row"><input type="checkbox" id="toggle-nearmap-weston_core" checked style="margin-right:6px;"> Weston downtown (clear)</label>
+  <label class="row"><input type="checkbox" id="toggle-nearmap-jacksons_mill" style="margin-right:6px;"> Jackson's Mill (clear)</label>
+  <label class="row"><input type="checkbox" id="toggle-nearmap-clarksburg_core" style="margin-right:6px;"> Clarksburg downtown (cloud-obscured)</label>
   </div>
 </div>
 
@@ -215,16 +216,21 @@ function initApp() {
 
   // Nearmap flood-day imagery (2026-07-22) -- actual licensed Nearmap tiles, not open data.
   // This site is password-gated for research-group-only distribution; do not treat as public.
-  const westonOverlay = L.imageOverlay('nearmap_weston.jpg',
-    [[39.033053, -80.473480], [39.042653, -80.461121]], { opacity: 1 });
-  const clarksburgOverlay = L.imageOverlay('nearmap_clarksburg.jpg',
-    [[39.276916, -80.345764], [39.286483, -80.333405]], { opacity: 1 });
-  westonOverlay.addTo(map);
-  document.getElementById('toggle-nearmap-weston').addEventListener('change', e => {
-    if (e.target.checked) westonOverlay.addTo(map); else map.removeLayer(westonOverlay);
-  });
-  document.getElementById('toggle-nearmap-clarksburg').addEventListener('change', e => {
-    if (e.target.checked) clarksburgOverlay.addTo(map); else map.removeLayer(clarksburgOverlay);
+  // Each zone's bounds/tiles were derived by checking coverage for every zoom-19 tile that
+  // contains an OSM building footprint from heritage.geojson, then filling out the full
+  // rectangular extent -- so these mosaics align with the actual heritage building locations,
+  // not an arbitrarily chosen crop.
+  const NEARMAP_ZONES = {
+    weston_core:     { file: 'nearmap_weston_core.jpg',     bounds: [[39.034653, -80.472107], [39.050652, -80.452194]], defaultOn: true },
+    jacksons_mill:   { file: 'nearmap_jacksons_mill.jpg',   bounds: [[39.094364, -80.475540], [39.102357, -80.465927]], defaultOn: false },
+    clarksburg_core: { file: 'nearmap_clarksburg_core.jpg', bounds: [[39.276384, -80.345764], [39.287014, -80.327225]], defaultOn: false },
+  };
+  Object.entries(NEARMAP_ZONES).forEach(([key, z]) => {
+    const overlay = L.imageOverlay(z.file, z.bounds, { opacity: 1 });
+    if (z.defaultOn) overlay.addTo(map);
+    document.getElementById(`toggle-nearmap-${key}`).addEventListener('change', e => {
+      if (e.target.checked) overlay.addTo(map); else map.removeLayer(overlay);
+    });
   });
 
 fetch('gauges.geojson')
