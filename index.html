@@ -117,6 +117,10 @@
   <div class="row"><span class="swatch" style="background:#555; border-width:2px"></span>River gauge station</div>
   <div class="row"><span class="swatch sq" style="background:#1a1a1a"></span>Media-reported damage (unverified)</div>
   <div class="row"><span class="swatch sq" style="background:#2a6fdb; opacity:0.35"></span>Nearmap imagery available (preliminary)</div>
+  <div class="divider"></div>
+  <h2 class="section">Nearmap flood-day imagery (2026-07-22)</h2>
+  <label class="row"><input type="checkbox" id="toggle-nearmap-weston" checked style="margin-right:6px;"> Weston (clear)</label>
+  <label class="row"><input type="checkbox" id="toggle-nearmap-clarksburg" style="margin-right:6px;"> Clarksburg (cloud-obscured)</label>
   </div>
 </div>
 
@@ -208,6 +212,20 @@ function initApp() {
   if (window.innerWidth < 700) {
     document.getElementById('title-panel').classList.add('collapsed');
   }
+
+  // Nearmap flood-day imagery (2026-07-22) -- actual licensed Nearmap tiles, not open data.
+  // This site is password-gated for research-group-only distribution; do not treat as public.
+  const westonOverlay = L.imageOverlay('nearmap_weston.jpg',
+    [[39.033053, -80.473480], [39.042653, -80.461121]], { opacity: 1 });
+  const clarksburgOverlay = L.imageOverlay('nearmap_clarksburg.jpg',
+    [[39.276916, -80.345764], [39.286483, -80.333405]], { opacity: 1 });
+  westonOverlay.addTo(map);
+  document.getElementById('toggle-nearmap-weston').addEventListener('change', e => {
+    if (e.target.checked) westonOverlay.addTo(map); else map.removeLayer(westonOverlay);
+  });
+  document.getElementById('toggle-nearmap-clarksburg').addEventListener('change', e => {
+    if (e.target.checked) clarksburgOverlay.addTo(map); else map.removeLayer(clarksburgOverlay);
+  });
 
 fetch('gauges.geojson')
   .then(r => r.json())

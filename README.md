@@ -8,10 +8,16 @@ Live at: https://rkn2.github.io/2026wvflood-heritage-map/ (password required)
 
 **Access note:** the password gate is a client-side JS check only (see `index.html`) — enough to keep
 this out of search engines and casual link-following, but anyone who views the page source can read the
-password. The GitHub repo itself is private for the same reason (so the source/password aren't
-publicly browsable on GitHub); the Pages URL still works without GitHub login, just with the password.
-This is a "keep it out of casual reach" measure, not real access control — don't rely on it for anything
-that needs to stay confidential against a determined viewer.
+password. GitHub Pages does not serve from private repos on the free plan (confirmed by testing — the
+site 404'd immediately), so **this repo is public**; the source, README, and every data/image file are
+directly readable/downloadable by URL regardless of the password. This is a "keep it out of casual
+reach" measure, not real access control.
+
+**Nearmap imagery included at Becca's explicit direction, with that limitation acknowledged.**
+`nearmap_weston.jpg` and `nearmap_clarksburg.jpg` are actual licensed Nearmap aerial photos (not open
+data like everything else in this repo) placed as georeferenced image overlays. Given the access note
+above, this is not meaningfully different from posting them publicly — treat this repo as containing
+real proprietary imagery that happens to have a password on the pretty version.
 
 ## What this shows
 
@@ -46,6 +52,7 @@ separate, independent layer — pulled directly from news reporting, not inferre
 | Damage report locations | Local news: My Buckhannon, WDTV, AP wire (via CBS News/NBC News), CNN — see each point's popup for its specific article link | 2026-07-23 |
 | Damage report coordinates | OpenStreetMap Nominatim geocoder, from street addresses / named landmarks in the articles | 2026-07-23 |
 | Nearmap imagery-awareness cells | Nearmap Coverage API (`api.nearmap.com/coverage/v2/point/...`), sampled on a ~1.3km grid over Weston/Clarksburg/Buckhannon, filtered to surveys tagged `postCatEventId` for this flood event. Metadata only — no imagery pixels included. | 2026-07-23 |
+| Nearmap flood-day imagery (Weston/Clarksburg overlays) | Nearmap Tile API (`Vert` layer, `until=2026-07-22`), disaster survey "North-Central West Virginia Flood," captured 2026-07-22 evening. Actual licensed imagery, not open data — see access note above. | 2026-07-23 |
 
 Full research pipeline and raw data lives in the private `steer` repo at
 `events/2026WVflood/data/{heritage,disaster}/`; this repo holds only the public-safe stripped copies
