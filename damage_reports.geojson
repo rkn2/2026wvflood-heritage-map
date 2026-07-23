@@ -1,0 +1,245 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.4149629,
+     39.0198514
+    ]
+   },
+   "properties": {
+    "name": "Weston Walmart Supercenter",
+    "county": "Lewis",
+    "damage_description": "Muddy floodwater surged into the store and parking lot",
+    "confirmation_tier": "media_reported",
+    "source_name": "AP wire (CBS News/NBC News)",
+    "source_url": "https://www.cbsnews.com/news/west-virginia-flash-floods-national-guard/",
+    "event_date": "2026-07-21/22",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.2350543,
+     38.9981085
+    ]
+   },
+   "properties": {
+    "name": "Buckhannon Walmart Supercenter",
+    "county": "Upshur",
+    "damage_description": "Store and parking lot completely flooded with deep water",
+    "confirmation_tier": "media_reported",
+    "source_name": "CNN",
+    "source_url": "https://www.cnn.com/2026/07/21/weather/severe-thunderstorms-northeast-ohio-valley",
+    "event_date": "2026-07-21/22",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.467313,
+     39.0384274
+    ]
+   },
+   "properties": {
+    "name": "Hotel near Weston Walmart / US-33-I-79 interchange (name not confirmed in sourcing)",
+    "county": "Lewis",
+    "damage_description": "High-water mark visible on an askew lobby door; first floor inundated with muddy water. News coverage did not name the specific hotel -- location is approximate (the I-79/US-33 interchange area, several hotels cluster here).",
+    "confirmation_tier": "media_reported",
+    "source_name": "AP wire (CBS News/NBC News)",
+    "source_url": "https://www.cbsnews.com/news/west-virginia-flash-floods-national-guard/",
+    "event_date": "2026-07-21/22",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.2247798,
+     38.9853144
+    ]
+   },
+   "properties": {
+    "name": "South Kanawha Street, downtown Buckhannon",
+    "county": "Upshur",
+    "damage_description": "SUV mostly submerged in floodwater on the street",
+    "confirmation_tier": "media_reported",
+    "source_name": "My Buckhannon",
+    "source_url": "https://www.mybuckhannon.com/latest-updates-search-continues-for-missing-residents-as-flood-waters-recede-in-upshur-county/",
+    "event_date": "2026-07-21/22",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.2848339,
+     38.9720223
+    ]
+   },
+   "properties": {
+    "name": "Stonecoal Road",
+    "county": "Upshur",
+    "damage_description": "Road impassable due to flooding",
+    "confirmation_tier": "media_reported",
+    "source_name": "My Buckhannon",
+    "source_url": "https://www.mybuckhannon.com/latest-updates-search-continues-for-missing-residents-as-flood-waters-recede-in-upshur-county/",
+    "event_date": "2026-07-21/22",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.224458,
+     38.9676791
+    ]
+   },
+   "properties": {
+    "name": "Country Club Road (near Vicksburg Road)",
+    "county": "Upshur",
+    "damage_description": "Road impassable due to flooding",
+    "confirmation_tier": "media_reported",
+    "source_name": "My Buckhannon",
+    "source_url": "https://www.mybuckhannon.com/latest-updates-search-continues-for-missing-residents-as-flood-waters-recede-in-upshur-county/",
+    "event_date": "2026-07-21/22",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.3495305,
+     38.9606531
+    ]
+   },
+   "properties": {
+    "name": "US-33 at base of Buckhannon Mountain",
+    "county": "Upshur/Lewis",
+    "damage_description": "Highway flooded between Weston and Buckhannon",
+    "confirmation_tier": "media_reported",
+    "source_name": "WDTV",
+    "source_url": "https://www.wdtv.com/2026/07/21/severe-flooding-reported-multiple-ncwv-communities/",
+    "event_date": "2026-07-21/22",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.2638546,
+     39.0026673
+    ]
+   },
+   "properties": {
+    "name": "US-33 near Huddle House, Buckhannon",
+    "county": "Upshur",
+    "damage_description": "Highway flooded between Weston and Buckhannon",
+    "confirmation_tier": "media_reported",
+    "source_name": "WDTV",
+    "source_url": "https://www.wdtv.com/2026/07/21/severe-flooding-reported-multiple-ncwv-communities/",
+    "event_date": "2026-07-21/22",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.2675849,
+     38.9941813
+    ]
+   },
+   "properties": {
+    "name": "US-33 at Brushy Fork intersection",
+    "county": "Upshur",
+    "damage_description": "Highway flooded between Weston and Buckhannon",
+    "confirmation_tier": "media_reported",
+    "source_name": "WDTV",
+    "source_url": "https://www.wdtv.com/2026/07/21/severe-flooding-reported-multiple-ncwv-communities/",
+    "event_date": "2026-07-21/22",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.4395983,
+     39.1813754
+    ]
+   },
+   "properties": {
+    "name": "US Route 19 near Goodhope",
+    "county": "Harrison",
+    "damage_description": "Large portion of the highway impassable due to flooding",
+    "confirmation_tier": "media_reported",
+    "source_name": "WDTV",
+    "source_url": "https://www.wdtv.com/2026/07/21/severe-flooding-reported-multiple-ncwv-communities/",
+    "event_date": "2026-07-21/22",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.231548,
+     38.9934594
+    ]
+   },
+   "properties": {
+    "name": "Upshur County Courthouse",
+    "county": "Upshur",
+    "damage_description": "County government closed the Courthouse, Annex, and Administrative Annex due to flooding. Note: this building is a contributing structure in the Downtown Buckhannon Historic District (see heritage layer).",
+    "confirmation_tier": "media_reported",
+    "source_name": "My Buckhannon",
+    "source_url": "https://www.mybuckhannon.com/latest-updates-search-continues-for-missing-residents-as-flood-waters-recede-in-upshur-county/",
+    "event_date": "2026-07-21/22",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.2367876,
+     38.9909948
+    ]
+   },
+   "properties": {
+    "name": "St. Joseph's Hospital of Buckhannon",
+    "county": "Upshur",
+    "damage_description": "Cancelled all clinic, outpatient, and scheduled surgical appointments due to flooding",
+    "confirmation_tier": "media_reported",
+    "source_name": "My Buckhannon",
+    "source_url": "https://www.mybuckhannon.com/latest-updates-search-continues-for-missing-residents-as-flood-waters-recede-in-upshur-county/",
+    "event_date": "2026-07-21/22",
+    "retrieved": "2026-07-23"
+   }
+  }
+ ]
+}

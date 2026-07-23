@@ -26,6 +26,11 @@
   .leaflet-popup-content b { display: block; margin-bottom: 4px; font-size: 14px; }
   .leaflet-popup-content .field { margin-top: 4px; }
   .leaflet-popup-content .field-label { color: #666; font-size: 11px; text-transform: uppercase; letter-spacing: 0.03em; }
+  .damage-icon {
+    width: 18px; height: 18px; display: flex; align-items: center; justify-content: center;
+    background: #1a1a1a; color: #fff; border-radius: 3px; border: 1px solid #fff;
+    font-size: 12px; font-weight: bold; box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  }
 </style>
 </head>
 <body>
@@ -33,11 +38,13 @@
 
 <div id="title-panel" class="panel">
   <h1>2026 West Virginia Flooding — Heritage Building Exposure</h1>
-  <p>15 NRHP-listed historic properties/districts in the north-central WV counties hit hardest by the
-  7/21–22/2026 flash flooding (Upshur, Lewis, Harrison, Pleasants). Color = current flood category at the
-  nearest river gauge — a proximity/exposure indicator, <b>not</b> a confirmed damage assessment.</p>
-  <p>Gauge readings update live from NOAA NWPS. Heritage building damage has not yet been field-verified —
-  see README for data sources and current limitations.</p>
+  <p>15 NRHP-listed historic properties/districts, 3 river gauges, and 12 media-reported damage points in
+  the north-central WV counties hit hardest by the 7/21–22/2026 flash flooding (Upshur, Lewis, Harrison,
+  Pleasants). Heritage color = current flood category at the nearest river gauge — a proximity/exposure
+  indicator, <b>not</b> a confirmed damage assessment.</p>
+  <p>Gauge readings update live from NOAA NWPS. Black markers are damage points pulled from local news
+  coverage — <b>media-reported, not field-verified.</b> Heritage building damage has not yet been
+  field-verified — see README for data sources and current limitations.</p>
 </div>
 
 <div id="legend" class="panel">
@@ -51,6 +58,7 @@
   <h2>Layers</h2>
   <div class="row"><span class="swatch sq" style="background:#555; opacity:0.55"></span>Heritage building / district</div>
   <div class="row"><span class="swatch" style="background:#555; border-width:2px"></span>River gauge station</div>
+  <div class="row"><span class="swatch sq" style="background:#1a1a1a"></span>Media-reported damage (unverified)</div>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -99,6 +107,16 @@ function heritagePopup(p) {
     html += `<div class="field"><div class="field-label">Nearest gauge</div>None in this dataset — flood exposure unknown</div>`;
   }
   html += `<div class="field"><div class="field-label">Source</div>${escapeHtml(p.source)} (retrieved ${escapeHtml(p.retrieved)})</div>`;
+  return html;
+}
+
+function damagePopup(p) {
+  let html = `<b>${escapeHtml(p.name)}</b>`;
+  html += `<div class="field"><div class="field-label">County</div>${escapeHtml(p.county)}, WV</div>`;
+  html += `<div class="field"><div class="field-label">Reported damage</div>${escapeHtml(p.damage_description)}</div>`;
+  html += `<div class="field"><div class="field-label">Confirmation</div>Media-reported — not field-verified</div>`;
+  html += `<div class="field"><div class="field-label">Event date</div>${escapeHtml(p.event_date)}</div>`;
+  html += `<div class="field"><div class="field-label">Source</div><a href="${escapeHtml(p.source_url)}" target="_blank" rel="noopener">${escapeHtml(p.source_name)}</a> (retrieved ${escapeHtml(p.retrieved)})</div>`;
   return html;
 }
 
@@ -172,9 +190,27 @@ fetch('gauges.geojson')
     heritageLayerRef = heritageLayer;
     heritageLayer.addTo(map);
 
+    return fetch('damage_reports.geojson').then(r => r.json());
+  })
+  .then(geojson => {
+    const damageIcon = L.divIcon({
+      className: '',
+      html: '<div class="damage-icon">!</div>',
+      iconSize: [18, 18],
+      iconAnchor: [9, 9]
+    });
+    const damageLayer = L.geoJSON(geojson, {
+      pointToLayer: (feature, latlng) => L.marker(latlng, { icon: damageIcon }),
+      onEachFeature: (feature, layer) => {
+        layer.bindPopup(damagePopup(feature.properties));
+      }
+    });
+    damageLayer.addTo(map);
+
     const b = L.latLngBounds([]);
     if (gaugeLayerRef) b.extend(gaugeLayerRef.getBounds());
-    b.extend(heritageLayer.getBounds());
+    if (heritageLayerRef) b.extend(heritageLayerRef.getBounds());
+    b.extend(damageLayer.getBounds());
     if (b.isValid()) {
       map.fitBounds(b, { padding: [30, 30] });
     } else {
