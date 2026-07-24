@@ -29,10 +29,12 @@ imagery that happens to have a password on the pretty version.
   Weston, near Clarksburg, and at Enterprise) with live NOAA National Water Prediction Service
   (NWPS) flood-category data. Alton and Walkersville sit upstream of Buckhannon and Weston
   respectively and never reached flood stage this event — useful upstream/downstream context.
-- **16 media-reported damage points** (black `!` markers) — specific locations named in local news
-  coverage: flooded stores, impassable roads/highway segments, a hospital that cancelled appointments,
-  the Upshur County Courthouse closure, and a cluster of suspected-tornado damage in Pleasants County
-  (a separate hazard from the same storm system — flagged as such in each point's popup, not flooding).
+- **24 media-reported damage points** (black `!` markers) — specific locations named in local news
+  coverage: flooded stores and downtown Buckhannon businesses, an evacuated hotel, two hospitals that
+  lost power or cancelled appointments, impassable roads/highway segments including a ~10-mile I-79
+  closure, county buildings beyond the courthouse (annex, senior center), and a cluster of
+  suspected-tornado damage in Pleasants County (a separate hazard from the same storm system —
+  flagged as such in each point's popup, not flooding).
 - **Preliminary Nearmap imagery-awareness layer** (blue dashed cells) — grid cells where Nearmap has
   post-event aerial imagery on file for this event ("North-Central West Virginia Flood," captured
   2026-07-22). This is a coverage indicator only — it tells you where recent aerial imagery *exists*,
@@ -147,7 +149,7 @@ Quality Hill (15), May-Kraus Farm (5), Weston State Hospital (1 — the asylum b
   (`stn.wim.usgs.gov`) will eventually provide surveyed extent data, but field crews haven't uploaded
   results yet as of 2026-07-23 (typically a days-to-weeks lag after crest).
   FEMA NFHL / `mapwv.gov/flood/` shows the static 100-/500-year floodplain, not this event's actual extent.
-- **No field-verified damage assessment** — the 16 damage points are media-reported only (see
+- **No field-verified damage assessment** — the 24 damage points are media-reported only (see
   caveats above); there is no StEER deployment for this event and no other agency's official damage
   assessment has been published either.
 - **SAR (Sentinel-1) checked and unavailable.** ASF catalog search confirmed no Sentinel-1 acquisition

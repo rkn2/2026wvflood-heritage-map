@@ -320,6 +320,166 @@
     "event_date": "2026-07-21",
     "retrieved": "2026-07-24"
    }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.4920953,
+     39.0474316
+    ]
+   },
+   "properties": {
+    "name": "Stonewall Jackson Memorial Hospital (Mon Health)",
+    "county": "Lewis",
+    "damage_description": "Lost power, ran on generator; cancelled outpatient appointments (a second, distinct hospital from St. Joseph's Hospital of Buckhannon)",
+    "confirmation_tier": "media_reported",
+    "source_name": "Scripps/KMTV via Apple Valley News Now",
+    "source_url": "https://www.applevalleynewsnow.com/weather/historic-west-virginia-flooding-washes-out-roads-knocks-out-911-service-as-rescues-continue/article_0a111184-31c3-5dd7-b141-6f1e8bf92444.html",
+    "event_date": "2026-07-21/22",
+    "retrieved": "2026-07-24"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.4067987,
+     39.1098747
+    ]
+   },
+   "properties": {
+    "name": "I-79 closure, Weston to Jane Lew -- location approximate",
+    "county": "Lewis",
+    "damage_description": "Interstate 79 closed for approximately 10 miles between Weston and Jane Lew. Point placed at Jane Lew as an approximate anchor for the closed stretch, not an exact spot.",
+    "confirmation_tier": "media_reported",
+    "source_name": "Scripps/KMTV via Apple Valley News Now",
+    "source_url": "https://www.applevalleynewsnow.com/weather/historic-west-virginia-flooding-washes-out-roads-knocks-out-911-service-as-rescues-continue/article_0a111184-31c3-5dd7-b141-6f1e8bf92444.html",
+    "event_date": "2026-07-21/22",
+    "retrieved": "2026-07-24"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.2641337,
+     39.0020095
+    ]
+   },
+   "properties": {
+    "name": "Wingate by Wyndham Buckhannon",
+    "county": "Upshur",
+    "damage_description": "Dozens of guests evacuated by boat as floodwater surrounded the hotel",
+    "confirmation_tier": "media_reported",
+    "source_name": "My Buckhannon",
+    "source_url": "https://www.mybuckhannon.com/flash-flood-emergency-issued-for-buckhannon-residents-urged-to-stay-off-roads/",
+    "event_date": "2026-07-21/22",
+    "retrieved": "2026-07-24"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.2281818,
+     38.9912109
+    ]
+   },
+   "properties": {
+    "name": "Lincoln Street (Buckhannon)",
+    "county": "Upshur",
+    "damage_description": "Creek flooding swept vehicles into the street, including a Lowe's company truck",
+    "confirmation_tier": "media_reported",
+    "source_name": "My Buckhannon",
+    "source_url": "https://www.mybuckhannon.com/flash-flood-emergency-issued-for-buckhannon-residents-urged-to-stay-off-roads/",
+    "event_date": "2026-07-21/22",
+    "retrieved": "2026-07-24"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.228262,
+     38.9924367
+    ]
+   },
+   "properties": {
+    "name": "Jawbone Park (Buckhannon)",
+    "county": "Upshur",
+    "damage_description": "A portable toilet and vehicles swept through the park by floodwater",
+    "confirmation_tier": "media_reported",
+    "source_name": "My Buckhannon",
+    "source_url": "https://www.mybuckhannon.com/flash-flood-emergency-issued-for-buckhannon-residents-urged-to-stay-off-roads/",
+    "event_date": "2026-07-21/22",
+    "retrieved": "2026-07-24"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.2302055,
+     38.9938628
+    ]
+   },
+   "properties": {
+    "name": "Moon Flower & Stone Tower Brews (Main Street, Buckhannon)",
+    "county": "Upshur",
+    "damage_description": "Two Main Street businesses closed due to flood damage/conditions",
+    "confirmation_tier": "media_reported",
+    "source_name": "My Buckhannon",
+    "source_url": "https://www.mybuckhannon.com/flash-flood-emergency-issued-for-buckhannon-residents-urged-to-stay-off-roads/",
+    "event_date": "2026-07-21/22",
+    "retrieved": "2026-07-24"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.2311205,
+     38.995565
+    ]
+   },
+   "properties": {
+    "name": "Upshur County Annex / Senior Center",
+    "county": "Upshur",
+    "damage_description": "County administrative annex and senior center flood-affected (in addition to the already-mapped Upshur County Courthouse)",
+    "confirmation_tier": "media_reported",
+    "source_name": "My Buckhannon",
+    "source_url": "https://www.mybuckhannon.com/flash-flood-emergency-issued-for-buckhannon-residents-urged-to-stay-off-roads/",
+    "event_date": "2026-07-21/22",
+    "retrieved": "2026-07-24"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.2302055,
+     38.9938628
+    ]
+   },
+   "properties": {
+    "name": "Pop's Furniture (downtown Buckhannon) -- location approximate",
+    "county": "Upshur",
+    "damage_description": "Destroyed inventory piled outside on the street after flood damage. Exact address not found in OSM; placed at the downtown Main Street anchor.",
+    "confirmation_tier": "media_reported",
+    "source_name": "WV MetroNews",
+    "source_url": "https://wvmetronews.com/2026/07/24/buckhannon-leans-on-community-in-aftermath-of-devastating-flood/",
+    "event_date": "2026-07-21/22",
+    "retrieved": "2026-07-24"
+   }
   }
  ]
 }
