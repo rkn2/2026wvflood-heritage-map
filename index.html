@@ -118,10 +118,11 @@
   <div class="row"><span class="swatch sq" style="background:#1a1a1a"></span>Media-reported damage (unverified)</div>
   <label class="row"><input type="checkbox" id="toggle-nearmap-coverage" style="margin-right:6px;"> <span class="swatch sq" style="background:#2a6fdb; opacity:0.35"></span>Nearmap imagery available (preliminary)</label>
   <div class="divider"></div>
-  <h2 class="section">Nearmap flood-day imagery (2026-07-22)</h2>
-  <label class="row"><input type="checkbox" id="toggle-nearmap-weston_core" checked style="margin-right:6px;"> Weston downtown (clear)</label>
-  <label class="row"><input type="checkbox" id="toggle-nearmap-jacksons_mill" style="margin-right:6px;"> Jackson's Mill (clear)</label>
-  <label class="row"><input type="checkbox" id="toggle-nearmap-clarksburg_core" style="margin-right:6px;"> Clarksburg downtown (cloud-obscured)</label>
+  <h2 class="section">Nearmap flood-day imagery</h2>
+  <label class="row"><input type="checkbox" id="toggle-nearmap-weston_core" checked style="margin-right:6px;"> Weston downtown (2026-07-22, clear)</label>
+  <label class="row"><input type="checkbox" id="toggle-nearmap-jacksons_mill" style="margin-right:6px;"> Jackson's Mill (2026-07-22, clear)</label>
+  <label class="row"><input type="checkbox" id="toggle-nearmap-clarksburg_core" style="margin-right:6px;"> Clarksburg downtown (2026-07-22, cloud-obscured)</label>
+  <label class="row"><input type="checkbox" id="toggle-nearmap-buckhannon_core" style="margin-right:6px;"> Buckhannon downtown (2026-07-23, clear)</label>
   </div>
 </div>
 
@@ -222,9 +223,10 @@ function initApp() {
   // rectangular extent -- so these mosaics align with the actual heritage building locations,
   // not an arbitrarily chosen crop.
   const NEARMAP_ZONES = {
-    weston_core:     { file: 'nearmap_weston_core.jpg',     bounds: [[39.034653, -80.472107], [39.050652, -80.452194]], defaultOn: true },
-    jacksons_mill:   { file: 'nearmap_jacksons_mill.jpg',   bounds: [[39.094364, -80.475540], [39.102357, -80.465927]], defaultOn: false },
-    clarksburg_core: { file: 'nearmap_clarksburg_core.jpg', bounds: [[39.276384, -80.345764], [39.287014, -80.327225]], defaultOn: false },
+    weston_core:      { file: 'nearmap_weston_core.jpg',      bounds: [[39.034653, -80.472107], [39.050652, -80.452194]], defaultOn: true },
+    jacksons_mill:    { file: 'nearmap_jacksons_mill.jpg',    bounds: [[39.094364, -80.475540], [39.102357, -80.465927]], defaultOn: false },
+    clarksburg_core:  { file: 'nearmap_clarksburg_core.jpg',  bounds: [[39.276384, -80.345764], [39.287014, -80.327225]], defaultOn: false },
+    buckhannon_core:  { file: 'nearmap_buckhannon_core.jpg',  bounds: [[38.983965, -80.240021], [39.003178, -80.214615]], defaultOn: false },
   };
   Object.entries(NEARMAP_ZONES).forEach(([key, z]) => {
     const overlay = L.imageOverlay(z.file, z.bounds, { opacity: 1 });

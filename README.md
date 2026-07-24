@@ -14,11 +14,11 @@ directly readable/downloadable by URL regardless of the password. This is a "kee
 reach" measure, not real access control.
 
 **Nearmap imagery included at Becca's explicit direction, with that limitation acknowledged.**
-`nearmap_weston_core.jpg`, `nearmap_jacksons_mill.jpg`, and `nearmap_clarksburg_core.jpg` are actual
-licensed Nearmap aerial photos (not open data like everything else in this repo), placed as georeferenced
-image overlays. Given the access note above, this is not meaningfully different from posting them
-publicly — treat this repo as containing real proprietary imagery that happens to have a password on the
-pretty version.
+`nearmap_weston_core.jpg`, `nearmap_jacksons_mill.jpg`, `nearmap_clarksburg_core.jpg`, and
+`nearmap_buckhannon_core.jpg` are actual licensed Nearmap aerial photos (not open data like everything
+else in this repo), placed as georeferenced image overlays. Given the access note above, this is not
+meaningfully different from posting them publicly — treat this repo as containing real proprietary
+imagery that happens to have a password on the pretty version.
 
 ## What this shows
 
@@ -55,7 +55,7 @@ separate, independent layer — pulled directly from news reporting, not inferre
 | Damage report locations | Local news: My Buckhannon, WDTV, AP wire (via CBS News/NBC News), CNN — see each point's popup for its specific article link | 2026-07-23 |
 | Damage report coordinates | OpenStreetMap Nominatim geocoder, from street addresses / named landmarks in the articles | 2026-07-23 |
 | Nearmap imagery-awareness cells | Nearmap Coverage API (`api.nearmap.com/coverage/v2/point/...`), sampled on a ~1.3km grid over Weston/Clarksburg/Buckhannon, filtered to surveys tagged `postCatEventId` for this flood event. Metadata only — no imagery pixels included. | 2026-07-23 |
-| Nearmap flood-day imagery (3 mosaics) | Nearmap Tile API (`Vert` layer, `until=2026-07-22`, zoom 19), disaster survey "North-Central West Virginia Flood," captured 2026-07-22 evening. Actual licensed imagery, not open data — see access note above. | 2026-07-23 |
+| Nearmap flood-day imagery (4 mosaics) | Nearmap Tile API (`Vert` layer, zoom 19), disaster survey "North-Central West Virginia Flood." Weston/Jackson's Mill/Clarksburg captured 2026-07-22 evening (`until=2026-07-22`); Buckhannon captured 2026-07-23 morning (`until=2026-07-23`, surveys `captureDateTime` 11:19 & 12:52 UTC, same `postCatEventId`). Actual licensed imagery, not open data — see access note above. | 2026-07-24 |
 
 Full research pipeline and raw data lives in the private `steer` repo at
 `events/2026WVflood/data/{heritage,disaster}/`; this repo holds only the public-safe stripped copies
@@ -86,16 +86,21 @@ Full research pipeline and raw data lives in the private `steer` repo at
     Jackson's Mill 4-H Camp, Clarksburg Downtown, Quality Hill, Glen Elk.
   - **Not covered (6 districts / properties, 227 buildings):** Shinnston, Salem, Annamede, May-Kraus
     Farm, Cain House, Pleasants County Courthouse.
-  - Note: only the original 3 mosaics (Weston, Jackson's Mill, Clarksburg) have been fetched and
-    stitched into this map so far — the new Buckhannon coverage is confirmed to exist via the
-    Coverage API but its imagery has **not** been pulled/added as a mosaic yet.
+  - **Buckhannon mosaic now fetched (2026-07-24)** — 1,332 zoom-19 tiles covering both Buckhannon
+    districts, `until=2026-07-23`, 100% tile-fill (no gaps). Unlike Weston's mosaic, the Buckhannon
+    imagery shows **no obvious flood signal** — no visibly muddy water in the river channel, no
+    standing water in streets, no visible debris at this resolution. This is plausibly consistent
+    with the timeline (Buckhannon's river crested 7/21-22 and was already well into recession by the
+    7/23 morning flight, a day-plus after Weston's capture caught active muddy floodwater) but has
+    not been otherwise confirmed — treat "imagery looks normal" as inconclusive, not as evidence the
+    flooding there was less severe. Buckhannon had the worst gauge reading of the whole event.
 - **Blue-cell awareness layer is grid-derived (approximate edges) and reflects the original
   2026-07-22 sweep** — it has not been regenerated to include the new 2026-07-23 Buckhannon
   surveys, so it will currently under-represent coverage there relative to the
   `nearmap_flood_coverage` field on the heritage layer.
 - **Clarksburg's mosaic is significantly cloud-obscured** in large sections (off by default in the
   layer toggle for that reason) — coverage existing doesn't mean the imagery is usable there. Weston
-  downtown and Jackson's Mill came through clear.
+  downtown, Jackson's Mill, and Buckhannon downtown all came through clear (no clouds).
 
 ### Damage report caveats
 
@@ -147,11 +152,9 @@ Quality Hill (15), May-Kraus Farm (5), Weston State Hospital (1 — the asylum b
   turned out to be the usable substitute (see above).
 - Clarksburg's cloud-obscured Nearmap capture means we still don't have clear recent imagery for that
   town's river corridor specifically.
-- Buckhannon now has Nearmap coverage on file (as of 2026-07-23) but its imagery hasn't been fetched
-  into a mosaic yet — that's the next step if it's wanted. Shinnston, Salem, Annamede, May-Kraus Farm,
-  Cain House, and Pleasants County Courthouse still have zero recent aerial imagery of any kind for
-  this event (no Sentinel-1, no Nearmap) — gauge exposure and media reports are the only signal
-  available for those places right now.
+- Shinnston, Salem, Annamede, May-Kraus Farm, Cain House, and Pleasants County Courthouse still have
+  zero recent aerial imagery of any kind for this event (no Sentinel-1, no Nearmap) — gauge exposure
+  and media reports are the only signal available for those places right now.
 
 Built with [Leaflet](https://leafletjs.com/) + OpenStreetMap tiles, no build step — just `index.html`,
 `heritage.geojson`, `gauges.geojson`, `damage_reports.geojson`, `nearmap_coverage.geojson`, and the 3
