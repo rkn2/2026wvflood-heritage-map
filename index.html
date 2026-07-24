@@ -117,7 +117,7 @@
   <div class="row"><span class="swatch" style="background:#9aa0a6"></span>No nearby gauge</div>
   <div class="divider"></div>
   <h2 class="section">Layers</h2>
-  <label class="row"><input type="checkbox" id="toggle-heritage" style="margin-right:6px;"> <span class="swatch sq" style="background:#555; opacity:0.55"></span>Heritage building / district</label>
+  <label class="row"><input type="checkbox" id="toggle-heritage" checked style="margin-right:6px;"> <span class="swatch sq" style="background:transparent; border:2px solid #555;"></span>Heritage building / district</label>
   <div class="row"><span class="swatch" style="background:#555; border-width:2px"></span>River gauge station</div>
   <div class="row"><span class="swatch sq" style="background:#1a1a1a"></span>Media-reported damage (unverified)</div>
   <label class="row"><input type="checkbox" id="toggle-nearmap-coverage" style="margin-right:6px;"> <span class="swatch sq" style="background:#2a6fdb; opacity:0.35"></span>Nearmap imagery available (preliminary)</label>
@@ -323,7 +323,7 @@ Promise.all([
           weight: g ? 2 : 1,
           dashArray: g ? null : '4,3',
           fillColor: color,
-          fillOpacity: 0.35
+          fillOpacity: 0
         };
       },
       pointToLayer: (feature, latlng) => {
@@ -335,7 +335,7 @@ Promise.all([
           fillColor: color,
           color: '#222',
           weight: p.is_nhl ? 2 : 1,
-          fillOpacity: 0.75
+          fillOpacity: 0
         });
       },
       onEachFeature: (feature, layer) => {
@@ -343,6 +343,7 @@ Promise.all([
       }
     });
     heritageLayerRef = heritageLayer;
+    heritageLayer.addTo(map);
     document.getElementById('toggle-heritage').addEventListener('change', e => {
       if (e.target.checked) heritageLayer.addTo(map); else map.removeLayer(heritageLayer);
     });
