@@ -25,8 +25,10 @@ pretty version.
 - **13 NRHP-listed historic districts/properties**, rendered as **3,151 individual building
   footprints** (plus 2 individually-listed properties shown as points), across Upshur, Lewis, Harrison,
   and Pleasants counties — the counties hardest hit by this event.
-- **3 river gauges** (Buckhannon River at Buckhannon, West Fork River at Weston, West Fork River near
-  Clarksburg) with live NOAA National Water Prediction Service (NWPS) flood-category data.
+- **6 river gauges** (Buckhannon River at Alton and at Buckhannon; West Fork River at Walkersville,
+  Weston, near Clarksburg, and at Enterprise) with live NOAA National Water Prediction Service
+  (NWPS) flood-category data. Alton and Walkersville sit upstream of Buckhannon and Weston
+  respectively and never reached flood stage this event — useful upstream/downstream context.
 - **12 media-reported damage points** (black `!` markers) — specific locations named in local news
   coverage: flooded stores, impassable roads/highway segments, a hospital that cancelled appointments,
   the Upshur County Courthouse closure.
@@ -49,7 +51,7 @@ separate, independent layer — pulled directly from news reporting, not inferre
 |---|---|---|
 | Heritage district identification (which places, which counties) | NPS NRHP GIS ArcGIS REST service (`mapservices.nps.gov/arcgis/rest/services/cultural_resources/nrhp_locations`), layers 0 (points) and 1 (polygons), filtered to Upshur/Lewis/Harrison/Pleasants counties, WV | 2026-07-23 |
 | Heritage building **geometry** (the actual shapes drawn on the map) | OpenStreetMap building footprints via the Overpass API, queried within each NRHP district's bounding envelope (see below) | 2026-07-23 |
-| River gauge flood category + stage/time series | NOAA NWPS API (`api.water.noaa.gov/nwps/v1/gauges/{id}`), gauges `bknw2`, `wtnw2`, `clkw2` | 2026-07-23 |
+| River gauge flood category + stage/time series | NOAA NWPS API (`api.water.noaa.gov/nwps/v1/gauges/{id}`), gauges `altw2`, `bknw2`, `wlkw2`, `wtnw2`, `clkw2`, `entw2` — found via a county-wide USGS Water Services sweep, not just name-search; see `overall/data-scoping-methodology.md` in the private repo | 2026-07-23 |
 | Damage report locations | Local news: My Buckhannon, WDTV, AP wire (via CBS News/NBC News), CNN — see each point's popup for its specific article link | 2026-07-23 |
 | Damage report coordinates | OpenStreetMap Nominatim geocoder, from street addresses / named landmarks in the articles | 2026-07-23 |
 | Nearmap imagery-awareness cells | Nearmap Coverage API (`api.nearmap.com/coverage/v2/point/...`), sampled on a ~1.3km grid over Weston/Clarksburg/Buckhannon, filtered to surveys tagged `postCatEventId` for this flood event. Metadata only — no imagery pixels included. | 2026-07-23 |
@@ -63,23 +65,34 @@ Full research pipeline and raw data lives in the private `steer` repo at
 
 - **Coverage findable ≠ damage confirmed.** A blue cell (or an image overlay) means Nearmap flew that spot
   after the flood — nothing more. Always check the actual imagery before drawing conclusions.
-- **Deployment didn't track flood severity.** Buckhannon had the worst river gauge reading of the whole
-  event (record major flood stage, first time in ~80 years) but got **zero** disaster-response coverage.
-  Weston (only "minor" gauge category) got the largest flown footprint. Whatever triggers Nearmap's
-  disaster-flight deployment, it isn't simply "how bad was the flooding" — treat "was it flown" as
-  independent information, not a severity proxy.
-- **Blue-cell layer is grid-derived (approximate edges); the 3 image mosaics are exhaustive
-  (exact).** The dashed-cell awareness layer comes from a ~1.3km sampling grid — approximate. The 3
-  actual imagery mosaics, by contrast, were built by checking Nearmap coverage for **every one of the
-  3,153 heritage building footprints individually** (974 unique zoom-19 tiles), then fetching the full
-  rectangular extent around each cluster that had buildings. Result, confirmed exhaustively rather than
-  spot-checked:
-  - **100% covered:** Weston Downtown Residential, Weston Downtown, Weston State Hospital, Jackson's Mill
-    4-H Camp, Clarksburg Downtown, Quality Hill, Glen Elk (all 1,855 buildings across these 7
-    districts sit inside the flown footprint)
-  - **0% covered:** Buckhannon Central Residential, Downtown Buckhannon, Shinnston, Salem, Annamede,
-    May-Kraus Farm, Cain House, Pleasants County Courthouse (all 1,298 buildings/points across these 8
-    properties have no Nearmap flood-day imagery at all)
+- **Deployment rolled out over multiple days and did not track flood severity at first.** As of
+  2026-07-23 (this event's first pass), Buckhannon — the worst river gauge reading of the whole
+  event, record major flood stage, first time in ~80 years — had **zero** disaster-response
+  coverage, while Weston (only "minor" gauge category) got the largest flown footprint. **Update,
+  same day (2026-07-23, later check):** Nearmap flew Buckhannon too — two new surveys captured
+  that morning (`captureDateTime` 2026-07-23T11:19–12:52 UTC), tagged to the same flood event ID
+  (`postCatEventId aeeed8d5-ddc5-58b2-b5ff-b47711b9edb0`). So the "doesn't track severity" finding
+  was real but time-bound: Buckhannon got flown, just a day later than Weston/Clarksburg. Treat
+  "was it flown yet" as a moving target for a rolling disaster-response deployment, not a
+  one-time fact — re-check the Coverage API before concluding a place has no coverage.
+- **Building-level coverage check, confirmed exhaustively (updated 2026-07-23).** Checked Nearmap's
+  Coverage API against representative points in each of the 15 districts, filtering specifically for
+  surveys tagged to this flood event's `postCatEventId` (not just any recent capture date, which can
+  produce false positives from routine, non-disaster survey flights). Result — each `heritage.geojson`
+  feature now carries a `nearmap_flood_coverage` boolean reflecting this:
+  - **Covered (9 districts / properties, 2,926 of 3,153 buildings):** Buckhannon Central Residential,
+    Downtown Buckhannon *(both newly covered as of the 2026-07-23 morning flight — not covered in the
+    original 2026-07-22 pass)*, Weston Downtown Residential, Weston Downtown, Weston State Hospital,
+    Jackson's Mill 4-H Camp, Clarksburg Downtown, Quality Hill, Glen Elk.
+  - **Not covered (6 districts / properties, 227 buildings):** Shinnston, Salem, Annamede, May-Kraus
+    Farm, Cain House, Pleasants County Courthouse.
+  - Note: only the original 3 mosaics (Weston, Jackson's Mill, Clarksburg) have been fetched and
+    stitched into this map so far — the new Buckhannon coverage is confirmed to exist via the
+    Coverage API but its imagery has **not** been pulled/added as a mosaic yet.
+- **Blue-cell awareness layer is grid-derived (approximate edges) and reflects the original
+  2026-07-22 sweep** — it has not been regenerated to include the new 2026-07-23 Buckhannon
+  surveys, so it will currently under-represent coverage there relative to the
+  `nearmap_flood_coverage` field on the heritage layer.
 - **Clarksburg's mosaic is significantly cloud-obscured** in large sections (off by default in the
   layer toggle for that reason) — coverage existing doesn't mean the imagery is usable there. Weston
   downtown and Jackson's Mill came through clear.
@@ -134,9 +147,11 @@ Quality Hill (15), May-Kraus Farm (5), Weston State Hospital (1 — the asylum b
   turned out to be the usable substitute (see above).
 - Clarksburg's cloud-obscured Nearmap capture means we still don't have clear recent imagery for that
   town's river corridor specifically.
-- Buckhannon, Shinnston, Salem, and the rural individual properties have zero recent aerial imagery of
-  any kind for this event (no Sentinel-1, no Nearmap) — gauge exposure and media reports are the only
-  signal available for those places right now.
+- Buckhannon now has Nearmap coverage on file (as of 2026-07-23) but its imagery hasn't been fetched
+  into a mosaic yet — that's the next step if it's wanted. Shinnston, Salem, Annamede, May-Kraus Farm,
+  Cain House, and Pleasants County Courthouse still have zero recent aerial imagery of any kind for
+  this event (no Sentinel-1, no Nearmap) — gauge exposure and media reports are the only signal
+  available for those places right now.
 
 Built with [Leaflet](https://leafletjs.com/) + OpenStreetMap tiles, no build step — just `index.html`,
 `heritage.geojson`, `gauges.geojson`, `damage_reports.geojson`, `nearmap_coverage.geojson`, and the 3

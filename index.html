@@ -88,7 +88,7 @@
     <span class="chevron">▾</span>
   </div>
   <div class="panel-body">
-  <p>15 NRHP-listed historic properties/districts, 3 river gauges, 12 media-reported damage points, and a
+  <p>15 NRHP-listed historic properties/districts, 6 river gauges, 12 media-reported damage points, and a
   preliminary Nearmap imagery-awareness layer, in the north-central WV counties hit hardest by the
   7/21–22/2026 flash flooding (Upshur, Lewis, Harrison, Pleasants). Heritage color = current flood
   category at the nearest river gauge — a proximity/exposure indicator, <b>not</b> a confirmed damage
@@ -164,6 +164,7 @@ function heritagePopup(p) {
   } else {
     html += `<div class="field"><div class="field-label">Nearest gauge</div>None in this dataset — flood exposure unknown</div>`;
   }
+  html += `<div class="field"><div class="field-label">Nearmap flood-day imagery</div>${p.nearmap_flood_coverage ? 'Covered (post-flood survey on file)' : 'No coverage on file'}</div>`;
   html += `<div class="field"><div class="field-label">Source</div>${escapeHtml(p.source)} (retrieved ${escapeHtml(p.retrieved)})</div>`;
   return html;
 }

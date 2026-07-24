@@ -84,6 +84,90 @@
     "source": "NOAA NWPS api.water.noaa.gov",
     "retrieved": "2026-07-23"
    }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.21388889,
+     38.819463889
+    ]
+   },
+   "properties": {
+    "gauge_id": "altw2",
+    "name": "Buckhannon River at Alton",
+    "river": "Buckhannon River",
+    "place": "Alton, WV (Upshur County) - upstream of Buckhannon",
+    "stage_current_ft": 6.44,
+    "stage_current_time": "2026-07-23T23:55:00Z",
+    "category_current": "no_flooding",
+    "stage_peak_ft": 11.73,
+    "stage_peak_time": "2026-07-22T09:05:00Z",
+    "category_peak": "below_action",
+    "flood_stage_action_ft": 12,
+    "flood_stage_minor_ft": 14,
+    "flood_stage_moderate_ft": 15,
+    "flood_stage_major_ft": 20,
+    "source": "NOAA NWPS api.water.noaa.gov",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.458055555556,
+     38.868611111111
+    ]
+   },
+   "properties": {
+    "gauge_id": "wlkw2",
+    "name": "West Fork River at Walkersville",
+    "river": "West Fork River",
+    "place": "Walkersville, WV (Lewis County) - upstream of Weston, above Stonewall Jackson Lake",
+    "stage_current_ft": 6.58,
+    "stage_current_time": "2026-07-23T23:45:00Z",
+    "category_current": "no_flooding",
+    "stage_peak_ft": 10.79,
+    "stage_peak_time": "2026-07-22T04:15:00Z",
+    "category_peak": "below_action",
+    "flood_stage_action_ft": 15,
+    "flood_stage_minor_ft": 16,
+    "flood_stage_moderate_ft": 19,
+    "flood_stage_major_ft": 22,
+    "source": "NOAA NWPS api.water.noaa.gov",
+    "retrieved": "2026-07-23"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.2761111,
+     39.422222222222
+    ]
+   },
+   "properties": {
+    "gauge_id": "entw2",
+    "name": "West Fork River at Enterprise",
+    "river": "West Fork River",
+    "place": "Enterprise, WV (Harrison County) - downstream of Clarksburg",
+    "stage_current_ft": 8.07,
+    "stage_current_time": "2026-07-23T23:15:00Z",
+    "category_current": "no_flooding",
+    "stage_peak_ft": 17.09,
+    "stage_peak_time": "2026-07-22T23:30:00Z",
+    "category_peak": "minor",
+    "flood_stage_action_ft": 16,
+    "flood_stage_minor_ft": 17,
+    "flood_stage_moderate_ft": 24,
+    "flood_stage_major_ft": 29,
+    "source": "NOAA NWPS api.water.noaa.gov",
+    "retrieved": "2026-07-23"
+   }
   }
  ]
 }
