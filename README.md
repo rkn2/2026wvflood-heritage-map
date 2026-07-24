@@ -57,7 +57,7 @@ separate, independent layer — pulled directly from news reporting, not inferre
 | River gauge flood category + stage/time series | NOAA NWPS API (`api.water.noaa.gov/nwps/v1/gauges/{id}`), gauges `altw2`, `bknw2`, `wlkw2`, `wtnw2`, `clkw2`, `entw2` — found via a county-wide USGS Water Services sweep, not just name-search; see `overall/data-scoping-methodology.md` in the private repo | 2026-07-23 |
 | Damage report locations | Local news: My Buckhannon, WDTV, WV MetroNews, The Vindicator, AP wire (via CBS News/NBC News), CNN — see each point's popup for its specific article link. Discovery pass (2026-07-24) used a Google News RSS scan (`tools/scan_media.py` in the private repo), not manual search. | 2026-07-24 |
 | Damage report coordinates | OpenStreetMap Nominatim geocoder, from street addresses / named landmarks in the articles | 2026-07-23 |
-| Nearmap imagery-awareness cells | Nearmap Coverage API (`api.nearmap.com/coverage/v2/point/...`), sampled on a ~1.3km grid over Weston/Clarksburg/Buckhannon, filtered to surveys tagged `postCatEventId` for this flood event. Metadata only — no imagery pixels included. | 2026-07-23 |
+| Nearmap imagery-awareness cells | Nearmap Coverage API (`api.nearmap.com/coverage/v2/point/...`), sampled on a ~1.3km grid over Weston/Clarksburg/Buckhannon (also swept Salem/Shinnston/Annamede/May–Kraus Farm/Pleasants County — no coverage found there yet), filtered to surveys tagged `postCatEventId` for this flood event. Metadata only — no imagery pixels included. 238 cells as of the 2026-07-24 re-sweep, up from 90 in the original 2026-07-22 pass. | 2026-07-24 |
 | Nearmap flood-day imagery (4 mosaics) | Nearmap Tile API (`Vert` layer, zoom 19), disaster survey "North-Central West Virginia Flood." Weston/Jackson's Mill/Clarksburg captured 2026-07-22 evening (`until=2026-07-22`); Buckhannon captured 2026-07-23 morning (`until=2026-07-23`, surveys `captureDateTime` 11:19 & 12:52 UTC, same `postCatEventId`). Actual licensed imagery, not open data — see access note above. | 2026-07-24 |
 
 Full research pipeline and raw data lives in the private `steer` repo at
@@ -97,10 +97,13 @@ Full research pipeline and raw data lives in the private `steer` repo at
     7/23 morning flight, a day-plus after Weston's capture caught active muddy floodwater) but has
     not been otherwise confirmed — treat "imagery looks normal" as inconclusive, not as evidence the
     flooding there was less severe. Buckhannon had the worst gauge reading of the whole event.
-- **Blue-cell awareness layer is grid-derived (approximate edges) and reflects the original
-  2026-07-22 sweep** — it has not been regenerated to include the new 2026-07-23 Buckhannon
-  surveys, so it will currently under-represent coverage there relative to the
-  `nearmap_flood_coverage` field on the heritage layer.
+- **Blue-cell awareness layer re-swept 2026-07-24** (grid-derived, so edges are still approximate).
+  Grew from 90 to 238 cells — new coverage across Weston (+63), Clarksburg (+34), and Buckhannon
+  (+51), reflecting flights beyond the original 2026-07-22 pass and the 2026-07-23 Buckhannon
+  surveys. Also swept the 5 districts/points still marked "not covered" below (Salem, Shinnston,
+  Annamede, May–Kraus Farm, Pleasants County Courthouse) — confirmed zero hits there, still no
+  Nearmap disaster-response coverage of any kind. Re-run `tools/nearmap_coverage_sweep.py` in the
+  private repo periodically, since this is a rolling deployment, not a one-time fact.
 - **Clarksburg's mosaic is significantly cloud-obscured** in large sections (off by default in the
   layer toggle for that reason) — coverage existing doesn't mean the imagery is usable there. Weston
   downtown, Jackson's Mill, and Buckhannon downtown all came through clear (no clouds).
