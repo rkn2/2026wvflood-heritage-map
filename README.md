@@ -105,8 +105,9 @@ Full research pipeline and raw data lives in the private `steer` repo at
 ### Damage report caveats
 
 - **Media-reported, not field-verified.** These are locations named in news coverage as flooded/closed/
-  damaged — no StEER field survey or official damage assessment exists yet for this event (it's 2 days
-  old). Treat as "worth checking," not "confirmed damage."
+  damaged — no official field damage assessment exists for this event (there is no StEER deployment
+  here; this is independent research, not an organized field response). Treat as "worth checking,"
+  not "confirmed damage."
 - **One point is a best-guess location, flagged as such.** The hotel with the widely-photographed
   high-water-mark lobby door was never named in any article found — it's placed near the Weston Walmart/
   I-79/US-33 interchange where multiple hotels cluster, since that's as precise as the sourcing allows.
@@ -145,8 +146,9 @@ Quality Hill (15), May-Kraus Farm (5), Weston State Hospital (1 — the asylum b
   (`stn.wim.usgs.gov`) will eventually provide surveyed extent data, but field crews haven't uploaded
   results yet as of 2026-07-23 (typically a days-to-weeks lag after crest).
   FEMA NFHL / `mapwv.gov/flood/` shows the static 100-/500-year floodplain, not this event's actual extent.
-- **No field-verified damage assessment yet** — the 12 damage points are media-reported only (see
-  caveats above); no StEER PVRR or official damage assessment exists yet for this 2-day-old event.
+- **No field-verified damage assessment** — the 12 damage points are media-reported only (see
+  caveats above); there is no StEER deployment for this event and no other agency's official damage
+  assessment has been published either.
 - **SAR (Sentinel-1) checked and unavailable.** ASF catalog search confirmed no Sentinel-1 acquisition
   over this AOI between 2026-07-15 and 2026-07-23 — a real coverage gap, not a processing choice. Nearmap
   turned out to be the usable substitute (see above).
