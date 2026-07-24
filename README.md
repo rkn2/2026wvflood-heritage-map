@@ -28,7 +28,9 @@ imagery that happens to have a password on the pretty version.
 - **6 river gauges** (Buckhannon River at Alton and at Buckhannon; West Fork River at Walkersville,
   Weston, near Clarksburg, and at Enterprise) with live NOAA National Water Prediction Service
   (NWPS) flood-category data. Alton and Walkersville sit upstream of Buckhannon and Weston
-  respectively and never reached flood stage this event — useful upstream/downstream context.
+  respectively and never reached flood stage this event — useful upstream/downstream context. Each
+  gauge's popup includes a small hydrograph (last ~6 days, hourly) with the flood-category
+  thresholds overlaid and the event peak marked — see caveats below.
 - **24 media-reported damage points** (black `!` markers) — specific locations named in local news
   coverage: flooded stores and downtown Buckhannon businesses, an evacuated hotel, two hospitals that
   lost power or cancelled appointments, impassable roads/highway segments including a ~10-mile I-79
@@ -54,7 +56,8 @@ separate, independent layer — pulled directly from news reporting, not inferre
 |---|---|---|
 | Heritage district identification (which places, which counties) | NPS NRHP GIS ArcGIS REST service (`mapservices.nps.gov/arcgis/rest/services/cultural_resources/nrhp_locations`), layers 0 (points) and 1 (polygons), filtered to Upshur/Lewis/Harrison/Pleasants counties, WV | 2026-07-23 |
 | Heritage building **geometry** (the actual shapes drawn on the map) | OpenStreetMap building footprints via the Overpass API, queried within each NRHP district's bounding envelope (see below) | 2026-07-23 |
-| River gauge flood category + stage/time series | NOAA NWPS API (`api.water.noaa.gov/nwps/v1/gauges/{id}`), gauges `altw2`, `bknw2`, `wlkw2`, `wtnw2`, `clkw2`, `entw2` — found via a county-wide USGS Water Services sweep, not just name-search; see `overall/data-scoping-methodology.md` in the private repo | 2026-07-23 |
+| River gauge flood category + current/peak stage | NOAA NWPS API (`api.water.noaa.gov/nwps/v1/gauges/{id}`), gauges `altw2`, `bknw2`, `wlkw2`, `wtnw2`, `clkw2`, `entw2` — found via a county-wide USGS Water Services sweep, not just name-search; see `overall/data-scoping-methodology.md` in the private repo | 2026-07-23 |
+| River gauge hydrograph (popup chart) | NOAA NWPS observed-stage time series (`.../gauges/{id}/stageflow`), hourly-downsampled from native 15-min readings, trimmed to since 2026-07-18 (`gauge_series.json`) | 2026-07-24 |
 | Damage report locations | Local news: My Buckhannon, WDTV, WV MetroNews, The Vindicator, AP wire (via CBS News/NBC News), CNN — see each point's popup for its specific article link. Discovery pass (2026-07-24) used a Google News RSS scan (`tools/scan_media.py` in the private repo), not manual search. | 2026-07-24 |
 | Damage report coordinates | OpenStreetMap Nominatim geocoder, from street addresses / named landmarks in the articles | 2026-07-23 |
 | Nearmap imagery-awareness cells | Nearmap Coverage API (`api.nearmap.com/coverage/v2/point/...`), sampled on a ~1.3km grid over Weston/Clarksburg/Buckhannon (also swept Salem/Shinnston/Annamede/May–Kraus Farm/Pleasants County — no coverage found there yet), filtered to surveys tagged `postCatEventId` for this flood event. Metadata only — no imagery pixels included. 238 cells as of the 2026-07-24 re-sweep, up from 90 in the original 2026-07-22 pass. | 2026-07-24 |
@@ -62,7 +65,8 @@ separate, independent layer — pulled directly from news reporting, not inferre
 
 Full research pipeline and raw data lives in the private `steer` repo at
 `events/2026WVflood/data/{heritage,disaster}/`; this repo holds only the public-safe stripped copies
-(`heritage.geojson`, `gauges.geojson`, `damage_reports.geojson`, `nearmap_coverage.geojson`).
+(`heritage.geojson`, `gauges.geojson`, `damage_reports.geojson`, `nearmap_coverage.geojson`,
+`gauge_series.json`).
 
 ### Nearmap coverage caveats
 
@@ -107,6 +111,21 @@ Full research pipeline and raw data lives in the private `steer` repo at
 - **Clarksburg's mosaic is significantly cloud-obscured** in large sections (off by default in the
   layer toggle for that reason) — coverage existing doesn't mean the imagery is usable there. Weston
   downtown, Jackson's Mill, and Buckhannon downtown all came through clear (no clouds).
+
+### River gauge hydrograph caveats
+
+- **Buckhannon gauge (`bknw2`) has a real sensor data gap right before its recorded peak.** NWPS's raw
+  feed returns `-9999` (the standard NWS/USGS missing-reading sentinel) for a run of 15-min readings
+  from **2026-07-22 08:15 UTC to 14:15 UTC** — nearly 6 hours, immediately preceding the officially
+  recorded peak of 27.59 ft at 14:15 UTC. Three shorter gaps (each ≤45 min) also occur around
+  14:45–16:00 UTC. This isn't a processing artifact — the sentinel values are filtered out of the
+  chart's line (shown as a shaded gray band instead of interpolated across), but it means the true
+  peak could plausibly have occurred during the gap and simply wasn't captured; treat the recorded
+  27.59 ft peak as a lower bound on Buckhannon's actual crest, not a confirmed maximum. None of the
+  other 5 gauges have any missing readings in this window.
+- The hydrograph is hourly-downsampled and trimmed to 2026-07-18 onward — enough to show the
+  pre-storm baseline, crest, and recession, not a full historical record. Re-run
+  `tools/fetch_gauge_series.py` in the private repo to refresh it.
 
 ### Damage report caveats
 

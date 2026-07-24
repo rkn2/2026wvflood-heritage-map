@@ -156,6 +156,7 @@ function fmtTime(iso) {
 
 let map;
 let gaugesById = {};
+let gaugeSeriesById = {};
 let gaugeLayerRef = null;
 let heritageLayerRef = null;
 
@@ -184,12 +185,53 @@ function damagePopup(p) {
   return html;
 }
 
+function gaugeSparkline(p, series) {
+  if (!series || !series.points || series.points.length < 2) return '';
+  const W = 260, H = 70, padL = 2, padR = 2, padT = 6, padB = 6;
+  const pts = series.points;
+  const times = pts.map(d => new Date(d.t).getTime());
+  const vals = pts.map(d => d.s);
+  const thresholds = [
+    ['action', p.flood_stage_action_ft], ['minor', p.flood_stage_minor_ft],
+    ['moderate', p.flood_stage_moderate_ft], ['major', p.flood_stage_major_ft]
+  ].filter(([, v]) => v !== undefined && v !== null);
+  const allVals = vals.concat(thresholds.map(([, v]) => v));
+  const vMin = Math.min(...allVals), vMax = Math.max(...allVals);
+  const vRange = (vMax - vMin) || 1;
+  const tMin = times[0], tMax = times[times.length - 1];
+  const tRange = (tMax - tMin) || 1;
+  const x = t => padL + ((t - tMin) / tRange) * (W - padL - padR);
+  const y = v => H - padB - ((v - vMin) / vRange) * (H - padT - padB);
+
+  let svg = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" style="display:block;">`;
+  thresholds.forEach(([cat, v]) => {
+    const color = CATEGORY_COLOR[cat] || '#999';
+    svg += `<line x1="${padL}" y1="${y(v).toFixed(1)}" x2="${W - padR}" y2="${y(v).toFixed(1)}" stroke="${color}" stroke-width="1" stroke-dasharray="3,2" opacity="0.6" />`;
+  });
+  (series.gaps || []).forEach(g => {
+    const gStart = new Date(g.start).getTime();
+    const gEnd = g.end ? new Date(g.end).getTime() : tMax;
+    svg += `<rect x="${x(gStart).toFixed(1)}" y="${padT}" width="${Math.max(1, x(gEnd) - x(gStart)).toFixed(1)}" height="${H - padT - padB}" fill="#999" opacity="0.18" />`;
+  });
+  const path = pts.map((d, i) => `${i === 0 ? 'M' : 'L'}${x(times[i]).toFixed(1)},${y(d.s).toFixed(1)}`).join(' ');
+  svg += `<path d="${path}" fill="none" stroke="#1a3d6d" stroke-width="1.6" />`;
+  const peakIdx = vals.indexOf(Math.max(...vals));
+  svg += `<circle cx="${x(times[peakIdx]).toFixed(1)}" cy="${y(vals[peakIdx]).toFixed(1)}" r="2.6" fill="#b3261e" />`;
+  svg += `</svg>`;
+
+  const gapNote = (series.gaps || []).length
+    ? `<div class="field" style="font-size:11px; color:#a55;">Shaded band${series.gaps.length > 1 ? 's' : ''}: sensor offline/missing readings (${series.gaps.map(g => fmtTime(g.start)).join(', ')})</div>`
+    : '';
+  return `<div class="field"><div class="field-label">Stage, last ~6 days (hourly; dashed = flood thresholds; red dot = peak)</div>${svg}${gapNote}</div>`;
+}
+
 function gaugePopup(p) {
   let html = `<b>${escapeHtml(p.name)}</b>`;
   html += `<div class="field"><div class="field-label">River / place</div>${escapeHtml(p.river)}, ${escapeHtml(p.place)}</div>`;
   html += `<div class="field"><div class="field-label">Current</div>${p.stage_current_ft} ft (${p.category_current.replace('_',' ')}) — ${fmtTime(p.stage_current_time)}</div>`;
   html += `<div class="field"><div class="field-label">Peak this event</div>${p.stage_peak_ft} ft (${p.category_peak.replace('_',' ')}) — ${fmtTime(p.stage_peak_time)}</div>`;
   html += `<div class="field"><div class="field-label">Flood stage thresholds (ft)</div>action ${p.flood_stage_action_ft} · minor ${p.flood_stage_minor_ft} · moderate ${p.flood_stage_moderate_ft} · major ${p.flood_stage_major_ft}</div>`;
+  html += gaugeSparkline(p, gaugeSeriesById[p.gauge_id]);
   html += `<div class="field"><div class="field-label">Source</div>${escapeHtml(p.source)} (retrieved ${escapeHtml(p.retrieved)})</div>`;
   return html;
 }
@@ -240,9 +282,12 @@ function initApp() {
     });
   });
 
-fetch('gauges.geojson')
-  .then(r => r.json())
-  .then(geojson => {
+Promise.all([
+  fetch('gauges.geojson').then(r => r.json()),
+  fetch('gauge_series.json').then(r => r.json()).catch(() => ({}))
+])
+  .then(([geojson, series]) => {
+    gaugeSeriesById = series;
     geojson.features.forEach(f => { gaugesById[f.properties.gauge_id] = f.properties; });
 
     const gaugeLayer = L.geoJSON(geojson, {
