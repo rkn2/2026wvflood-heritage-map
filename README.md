@@ -29,9 +29,10 @@ imagery that happens to have a password on the pretty version.
   Weston, near Clarksburg, and at Enterprise) with live NOAA National Water Prediction Service
   (NWPS) flood-category data. Alton and Walkersville sit upstream of Buckhannon and Weston
   respectively and never reached flood stage this event — useful upstream/downstream context.
-- **12 media-reported damage points** (black `!` markers) — specific locations named in local news
+- **16 media-reported damage points** (black `!` markers) — specific locations named in local news
   coverage: flooded stores, impassable roads/highway segments, a hospital that cancelled appointments,
-  the Upshur County Courthouse closure.
+  the Upshur County Courthouse closure, and a cluster of suspected-tornado damage in Pleasants County
+  (a separate hazard from the same storm system — flagged as such in each point's popup, not flooding).
 - **Preliminary Nearmap imagery-awareness layer** (blue dashed cells) — grid cells where Nearmap has
   post-event aerial imagery on file for this event ("North-Central West Virginia Flood," captured
   2026-07-22). This is a coverage indicator only — it tells you where recent aerial imagery *exists*,
@@ -52,7 +53,7 @@ separate, independent layer — pulled directly from news reporting, not inferre
 | Heritage district identification (which places, which counties) | NPS NRHP GIS ArcGIS REST service (`mapservices.nps.gov/arcgis/rest/services/cultural_resources/nrhp_locations`), layers 0 (points) and 1 (polygons), filtered to Upshur/Lewis/Harrison/Pleasants counties, WV | 2026-07-23 |
 | Heritage building **geometry** (the actual shapes drawn on the map) | OpenStreetMap building footprints via the Overpass API, queried within each NRHP district's bounding envelope (see below) | 2026-07-23 |
 | River gauge flood category + stage/time series | NOAA NWPS API (`api.water.noaa.gov/nwps/v1/gauges/{id}`), gauges `altw2`, `bknw2`, `wlkw2`, `wtnw2`, `clkw2`, `entw2` — found via a county-wide USGS Water Services sweep, not just name-search; see `overall/data-scoping-methodology.md` in the private repo | 2026-07-23 |
-| Damage report locations | Local news: My Buckhannon, WDTV, AP wire (via CBS News/NBC News), CNN — see each point's popup for its specific article link | 2026-07-23 |
+| Damage report locations | Local news: My Buckhannon, WDTV, WV MetroNews, The Vindicator, AP wire (via CBS News/NBC News), CNN — see each point's popup for its specific article link. Discovery pass (2026-07-24) used a Google News RSS scan (`tools/scan_media.py` in the private repo), not manual search. | 2026-07-24 |
 | Damage report coordinates | OpenStreetMap Nominatim geocoder, from street addresses / named landmarks in the articles | 2026-07-23 |
 | Nearmap imagery-awareness cells | Nearmap Coverage API (`api.nearmap.com/coverage/v2/point/...`), sampled on a ~1.3km grid over Weston/Clarksburg/Buckhannon, filtered to surveys tagged `postCatEventId` for this flood event. Metadata only — no imagery pixels included. | 2026-07-23 |
 | Nearmap flood-day imagery (4 mosaics) | Nearmap Tile API (`Vert` layer, zoom 19), disaster survey "North-Central West Virginia Flood." Weston/Jackson's Mill/Clarksburg captured 2026-07-22 evening (`until=2026-07-22`); Buckhannon captured 2026-07-23 morning (`until=2026-07-23`, surveys `captureDateTime` 11:19 & 12:52 UTC, same `postCatEventId`). Actual licensed imagery, not open data — see access note above. | 2026-07-24 |
@@ -146,7 +147,7 @@ Quality Hill (15), May-Kraus Farm (5), Weston State Hospital (1 — the asylum b
   (`stn.wim.usgs.gov`) will eventually provide surveyed extent data, but field crews haven't uploaded
   results yet as of 2026-07-23 (typically a days-to-weeks lag after crest).
   FEMA NFHL / `mapwv.gov/flood/` shows the static 100-/500-year floodplain, not this event's actual extent.
-- **No field-verified damage assessment** — the 12 damage points are media-reported only (see
+- **No field-verified damage assessment** — the 16 damage points are media-reported only (see
   caveats above); there is no StEER deployment for this event and no other agency's official damage
   assessment has been published either.
 - **SAR (Sentinel-1) checked and unavailable.** ASF catalog search confirmed no Sentinel-1 acquisition

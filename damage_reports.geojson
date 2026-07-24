@@ -240,6 +240,86 @@
     "event_date": "2026-07-21/22",
     "retrieved": "2026-07-23"
    }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.2331821,
+     38.9989082
+    ]
+   },
+   "properties": {
+    "name": "Sheetz (Buckhannon)",
+    "county": "Upshur",
+    "damage_description": "Store and parking lot completely surrounded by water, flooding into the roadways (observed 2:20pm 7/22)",
+    "confirmation_tier": "media_reported",
+    "source_name": "WDTV",
+    "source_url": "https://www.wdtv.com/video/2026/07/22/sheetz-buckhannon-is-completely-surrounded-by-water-even-into-roadways-220-pm/",
+    "event_date": "2026-07-21/22",
+    "retrieved": "2026-07-24"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.4634445,
+     39.0403947
+    ]
+   },
+   "properties": {
+    "name": "East 4th Street (Weston)",
+    "county": "Lewis",
+    "damage_description": "Street flooding on East 4th Street",
+    "confirmation_tier": "media_reported",
+    "source_name": "WV MetroNews",
+    "source_url": "https://wvmetronews.com/2026/07/22/video-flooding-on-e-4th-st-weston/",
+    "event_date": "2026-07-21/22",
+    "retrieved": "2026-07-24"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.2029705,
+     39.3785315
+    ]
+   },
+   "properties": {
+    "name": "Greens Run Road tornado damage cluster (Pleasants County)",
+    "county": "Pleasants",
+    "damage_description": "Tornado damage, not flooding -- a separate hazard from the same storm system. A cell tower was bent over near Route 16; the WRRR-FM (93-R) transmitter tower collapsed down a hillside; at least one nearby home lost its roof and garage, and a falling tower narrowly missed a neighboring home (resident names known from sourcing, withheld here). Approximate location (road-level, not exact structure).",
+    "confirmation_tier": "media_reported",
+    "source_name": "The Vindicator",
+    "source_url": "https://www.vindy.com/news/local-news/2026/07/pleasants-county-wva-hit-by-suspected-tornadoes/",
+    "event_date": "2026-07-21",
+    "retrieved": "2026-07-24"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -81.2051132,
+     39.391742
+    ]
+   },
+   "properties": {
+    "name": "Riverview Estates (trailer park), St. Marys area -- location approximate",
+    "county": "Pleasants",
+    "damage_description": "Tornado damage, not flooding -- a separate hazard from the same storm system. Two mobile homes flipped and carports destroyed near Wrights Riverside Marine. Exact trailer-park location not found in OSM/Nominatim; placed at St. Marys town center as an approximate anchor.",
+    "confirmation_tier": "media_reported",
+    "source_name": "The Vindicator",
+    "source_url": "https://www.vindy.com/news/local-news/2026/07/pleasants-county-wva-hit-by-suspected-tornadoes/",
+    "event_date": "2026-07-21",
+    "retrieved": "2026-07-24"
+   }
   }
  ]
 }
